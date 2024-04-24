@@ -1,0 +1,44 @@
+@use "global" as *;
+
+
+.p-contact {
+    background-color: $white02;
+}
+
+.p-contact__inner {
+    @include mq(md) {
+        padding-inline: rem(27);
+    }
+
+    @include mq('sm') {
+        padding-inline: rem(10);
+    }
+}
+
+.l-inner--small {}
+
+
+.p-contact__form {
+    background: rgba(248, 248, 248, 0.80);
+    box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.20);
+    padding: rem(64) rem(80) rem(150);
+
+    @include mq(md) {
+        padding: rem(36) rem(17) rem(40);
+    }
+
+}
+
+.p-contact__grecaptcha {
+    margin-top: rem(56);
+    text-align: center;
+
+    @include mq(md) {
+        margin-top: rem(40);
+    }
+}
+
+.p-contact__grecaptcha a {
+    text-decoration: underline;
+}
+

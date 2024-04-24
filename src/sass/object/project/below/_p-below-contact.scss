@@ -1,0 +1,225 @@
+@use "global" as *;
+
+.p-below-contact {
+    background: url(../images/below/works_bg03.png) no-repeat center center/cover;
+    width: 100%;
+    height: 100%;
+
+    @include mq(md) {
+        background: url(../images/below/works_bg03_sp.png) no-repeat center center/cover;
+    }
+}
+
+.p-below-contact__inner {
+    padding-bottom: rem(24);
+
+    @include mq(md) {
+        padding-inline: rem(28);
+        padding-bottom: 0;
+    }
+}
+
+.p-below-contact__title-wrap {
+    text-align: center;
+
+    @include mq(sm) {
+        text-align: left;
+    }
+}
+
+
+.p-below-contact__lists {
+    margin-top: rem(80);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: rem(20) rem(27);
+
+    @include mq(md) {
+        margin-top: rem(40);
+        max-width: rem(400);
+        margin-inline: auto;
+        width: 100%;
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+.p-below-contact__list {
+    background: rgba(255, 255, 255, 0.60);
+    box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.20);
+}
+
+.p-below-contact__head {
+    background: #1E4268;
+    color: $white;
+    font-size: rem(15);
+    letter-spacing: .3px;
+    font-weight: 600;
+    padding: rem(10) rem(32);
+
+    @include mq(md) {
+        padding: rem(9);
+        text-align: center;
+    }
+}
+
+.p-below-contact__box {
+    padding: rem(32);
+    padding-bottom: rem(45);
+
+    @include mq(md) {
+        padding: rem(19);
+        padding-bottom: rem(31);
+    }
+}
+
+.p-below-contact__link {
+    display: block;
+    width: 100%;
+    padding: rem(23) rem(24);
+    padding-bottom: rem(18);
+    color: #1E4268;
+    border: 1px solid #1E4268;
+    position: relative;
+
+    @include mq(md) {
+        padding: rem(10) rem(11);
+        padding-bottom: rem(12);
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        background: url(../images/below/next-arrow.svg) no-repeat center center/contain;
+        width: rem(12);
+        height: rem(20);
+        top: 50%;
+        transform: translateY(-50%);
+        right: rem(32);
+        transition: all 0.3s ease 0s;
+
+        @include mq(md) {
+            width: rem(8);
+            height: rem(14);
+            right: rem(15);
+        }
+    }
+}
+
+@media (hover: hover) {
+    .p-below-contact__link:hover {
+        opacity: .88;
+
+        &::after {
+            right: rem(22);
+            opacity: .88;
+        }
+    }
+}
+
+.p-below-contact__link--mail {
+    padding: rem(27) rem(22);
+
+    @include mq(md) {
+        padding: rem(20) rem(23);
+    }
+}
+
+.p-below-contact__tel {
+    display: flex;
+    align-items: center;
+
+    @include mq(md) {
+        justify-content: center;
+    }
+
+    @media (max-width: 400px) {
+        justify-content: flex-start;
+    }
+}
+
+.p-below-contact__img {
+    width: rem(45);
+    max-width: 100%;
+    height: 100%;
+
+    @include mq(md) {
+        width: rem(25);
+    }
+}
+
+.p-below-contact__img img {
+    object-fit: contain;
+    height: auto;
+    aspect-ratio: 1/1;
+}
+
+.p-below-contact__lead-mail {
+    font-size: rem(32);
+    font-weight: 700;
+    letter-spacing: .64px;
+
+    @include mq(md) {
+        font-size: rem(18);
+        letter-spacing: .9px;
+        text-align: center;
+    }
+
+    @media (max-width: 400px) {
+        text-align: left;
+    }
+}
+
+.p-below-contact__lead p {
+    font-size: rem(40);
+    font-weight: 700;
+    letter-spacing: 2px;
+    line-height: 1;
+
+    @include mq(md) {
+        font-size: rem(28);
+        letter-spacing: 0.56px;
+    }
+}
+
+.p-below-contact__lead span {
+    display: block;
+    margin-top: rem(5);
+    font-family: $third-font-family;
+
+    @include mq(md) {
+        font-size: rem(11);
+        line-height: 1.5;
+    }
+}
+
+.p-below-contact__lead small {
+    font-size: rem(16);
+
+    @include mq(md) {
+        font-size: rem(10);
+    }
+}
+
+
+.p-below-contact__lead--tel {
+    margin-left: rem(29);
+
+    @include mq(md) {
+        margin-left: rem(14);
+    }
+}
+
+.p-below-contact__text {
+    margin-top: rem(22);
+    font-size: rem(15);
+    line-height: 1.8;
+    color: $gray02;
+    font-family: $third-font-family;
+
+    @include mq(md) {
+        margin-top: rem(15);
+        font-size: rem(12);
+        line-height: 1.66;
+        letter-spacing: .12px;
+    }
+}

@@ -1,0 +1,16 @@
+@use "global" as *;
+
+.p-thanks {
+    background-color: $white02;
+    color: $black;
+}
+
+.p-thanks__inner {
+    @include mq(md) {
+        padding-inline: rem(30);
+    }
+}
+
+.p-thanks__lead p:not(:first-child) {
+    margin-top: rem(40);
+}

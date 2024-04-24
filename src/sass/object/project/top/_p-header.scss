@@ -1,0 +1,419 @@
+@use "global" as *;
+
+.p-header {
+    height: 80px;
+    font-size: rem(15);
+    width: 100%;
+    color: $white02;
+    letter-spacing: 0.3px;
+
+    @include mq("md") {
+        height: 50px;
+    }
+}
+
+.p-header__inner {
+    position: relative;
+    z-index: $layer-header + 5;
+    padding-left: rem(60);
+    max-width: rem(1440);
+    max-width: rem(1800);
+    width: 100%;
+    margin-inline: auto;
+    height: inherit;
+    display: flex;
+    justify-content: space-between;
+
+    @include mq("md") {
+        padding-left: rem(10);
+    }
+}
+
+.p-header__logo {
+    height: inherit;
+    font-size: rem(20);
+    color: $white;
+
+    @include mq(md) {
+        font-size: rem(15);
+    }
+}
+
+.p-header__logo a {
+    height: inherit;
+    display: flex;
+    align-items: center;
+}
+
+.p-header__logo img {
+    max-width: 204px;
+    width: 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+
+    @include mq("md") {
+        max-width: rem(162);
+    }
+}
+
+.p-header__nav-lists {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: inherit;
+}
+
+.p-header__nav {
+    height: inherit;
+
+    @include mq("md") {
+        display: none;
+        height: inherit;
+    }
+}
+
+.p-header__nav-items {
+    display: flex;
+    justify-content: flex-end;
+    height: inherit;
+    padding-right: rem(26);
+}
+
+.p-header__nav-item {
+    height: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: rem(12);
+}
+
+.p-header__nav-item a {
+    padding: rem(8) rem(14);
+    display: flex;
+    align-items: center;
+    line-height: 1;
+    white-space: nowrap;
+    transition: color 0.3s ease 0s;
+}
+
+/* メニューアイテムのホバースタイル */
+.p-header__nav-item:hover .p-header__drop-menu-list {
+    opacity: 1;
+    /* 不透明度を最大に */
+    transition: opacity .7s, visibility .7s;
+    /* アニメーション設定 */
+    visibility: visible;
+    /* 下層メニューを表示 */
+}
+
+/* ドロップダウンメニュー */
+.p-header__drop-menu {
+    position: relative;
+}
+
+.p-header__drop-menu-list {
+    padding-top: rem(10);
+    padding-bottom: rem(10);
+    color: $white02;
+    border-left: 1px solid $white02;
+    left: rem(15);
+    opacity: 0;
+    /* 不透明度を最小に */
+    position: absolute;
+    top: 60px;
+    transition: all .7s;
+    visibility: hidden;
+    /* 下層メニューを非表示 */
+    width: max-content;
+    z-index: 1;
+}
+
+/* ヘッダー色変更 */
+.p-header.change-color {
+    background-color: $white02; //スクロールしたあとのヘッダー背景色
+    transition: background-color 0.7s ease 0s;
+}
+
+.p-header.change-color .p-header__nav,
+.p-header.change-color .p-header__logo,
+.p-header.change-color .p-header__drop-menu-item {
+    color: $black;
+    transition: color 0.7s ease 0s;
+}
+
+
+.p-header.change-color .p-header__drop-menu-item {
+    border-left: 1px solid $black;
+    transition: border 0.7s ease 0s;
+}
+
+.p-header.change-color .p-header__drop-menu-list {
+    background-color: $white02;
+    transition: all .7s;
+    top: 100%;
+    left: 0;
+    padding-left: rem(16);
+}
+
+
+.p-header.change-color .p-header__hamburger span {
+    background-color: $black04;
+    transition: background-color 0.7s ease 0s;
+}
+
+@media (hover: hover) {
+    .p-header__drop-menu-list a:hover {
+        color: #9B9B9B;
+        opacity: 1;
+    }
+}
+
+/* ドロワーメニューが開いた時のスタイル */
+.p-header.is-drawer-open .p-header__logo {
+    color: $white;
+}
+
+.p-header.is-drawer-open .p-header__hamburger span {
+    background-color: $white;
+}
+
+
+.p-header__nav-contact {
+    height: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: $black02;
+    padding-left: rem(23);
+
+    @include mq(md) {
+        position: fixed;
+        top: 0;
+        right: 0;
+        padding-left: rem(4);
+        padding-right: rem(4);
+    }
+}
+
+.p-header__nav-contact-head {
+    font-size: rem(16);
+    font-weight: 600;
+
+    @include mq(md) {
+        display: none;
+    }
+}
+
+.p-header__nav-contact-head a {
+    padding: .4em;
+}
+
+.p-header__nav-contact-items {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: inherit;
+}
+
+.p-header__nav-contact-item {
+    height: inherit;
+}
+
+.p-header__nav-contact-item a {
+    display: block;
+    padding: rem(24);
+    height: inherit;
+
+    @include mq(md) {
+        padding: rem(12);
+    }
+}
+
+.p-header__nav-contact-img {
+    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.p-header__nav-contact-img--mail {
+    width: rem(24);
+    height: 100%;
+
+    @include mq(md) {
+        width: rem(17);
+    }
+}
+
+.p-header__nav-contact-img--tel {
+    width: rem(22);
+    height: 100%;
+    position: relative;
+
+    @include mq(md) {
+        width: rem(15);
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        width: rem(1);
+        height: rem(22);
+        background-color: $white;
+        top: 50%;
+        transform: translateY(-50%);
+        left: rem(-24);
+
+        @include mq(md) {
+            left: rem(-12);
+            height: rem(14);
+        }
+    }
+}
+
+/* hamburger */
+.p-header__hamburger {
+    display: none;
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+    position: relative;
+    z-index: 999;
+    width: rem(52);
+    height: rem(50);
+    cursor: pointer;
+    transition: .3s;
+    right: rem(88);
+
+    @include mq("md") {
+        display: block;
+    }
+}
+
+.p-header__hamburger.is-open {
+    background-color: transparent;
+}
+
+.p-header__hamburger span {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    display: block;
+    width: rem(20);
+    height: 1px;
+    background-color: $white;
+    transition: .5s;
+}
+
+.p-header__hamburger span:nth-of-type(1) {
+    top: -4px;
+}
+
+.p-header__hamburger span:nth-of-type(2) {
+    top: 0;
+}
+
+.p-header__hamburger span:nth-of-type(3) {
+    top: 4px;
+}
+
+.p-header__hamburger.is-open span:nth-of-type(1) {
+    top: 0;
+    transform: translateX(-50%) rotate(30deg);
+}
+
+.p-header__hamburger.is-open span:nth-of-type(2) {
+    opacity: 0;
+}
+
+.p-header__hamburger.is-open span:nth-of-type(3) {
+    top: -2px;
+    transform: translateX(-50%) rotate(-30deg);
+}
+
+
+/* drawer */
+.p-header__drawer {
+    padding-right: rem(40);
+    position: fixed;
+    z-index: $layer-header + 1;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: $black02;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    color: $white;
+    text-align: right;
+    transition: transform 0.5s ease;
+    transform: translateX(100%);
+    padding-top: rem(70);
+    font-size: rem(13);
+    font-weight: 600;
+}
+
+.p-header__drawer-nav {
+    background-color: $black02;
+}
+
+.p-header__drawer.is-open {
+    transform: translateX(0);
+}
+
+.p-header__drawer::-webkit-scrollbar {
+    display: none;
+}
+
+.p-header__drawer-nav {
+    margin: auto;
+}
+
+.p-header__drawer-item {
+    transform: translate(20px, 0px);
+    transition: 0.6s ease 0.6s;
+    opacity: 0;
+}
+
+.p-header__drawer-item--mt24 {
+    margin-top: rem(24);
+}
+
+.p-header__drawer-menu-list {
+    transform: translateX(60px);
+    transition: 0.6s ease 0.6s;
+    opacity: 0;
+    font-size: rem(12);
+}
+
+.p-header__drawer-menu-item:not(:first-child) {
+    margin-top: rem(10);
+}
+
+.p-header__drawer-item.is-open {
+    transform: translate(0px, 0px);
+    opacity: 1;
+}
+
+.p-header__drawer-menu-list.is-open {
+    opacity: 1;
+    transform: translateX(40px);
+}
+
+.p-header__drawer-link {
+    padding: rem(24) 0;
+    display: block;
+}
+
+/* ドロップダウンメニュー */
+.p-header__drawer-menu-list {
+    padding-right: rem(11);
+    margin-right: rem(40);
+    padding-left: rem(10);
+    color: $white02;
+    border-right: 1px solid $white02;
+    text-align: right;
+}

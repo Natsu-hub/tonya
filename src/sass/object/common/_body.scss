@@ -1,0 +1,34 @@
+@use "global" as *;
+
+/********************************
+* 共通設定
+********************************/
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    min-height: 100vh;
+    font-family: $base-font-family;
+    color: $black;
+    background: $black03;
+    z-index: $layer-background;
+    position: relative;
+    line-height: calc(32 / 16);
+    font-size: rem(16);
+    font-weight: 300;
+    opacity: 0;
+
+    @include mq(md) {
+        background: $black02;
+        font-size: rem(15);
+        letter-spacing: 0.15px;
+        min-height: 100svh;
+    }
+}
+
+.body-no-scroll {
+    overflow: hidden;
+    height: 100%;
+    width: 100vw;
+}

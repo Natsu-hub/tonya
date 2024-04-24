@@ -1,0 +1,253 @@
+@use "global" as *;
+
+.cf7__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 60px;
+}
+
+.cf7__list dt:nth-of-type(n + 2),
+.cf7__list dd:nth-of-type(n + 2) {
+    margin-top: rem(41);
+}
+
+.cf7__list dt {
+    width: 33%;
+    padding-top: rem(15);
+    font-size: rem(18);
+    font-weight: 600;
+    letter-spacing: .54px;
+}
+
+.cf7__list dd {
+    width: 67%;
+}
+
+/* 必須・任意 */
+.cf7__required,
+.cf7__optional {
+    margin-right: rem(22);
+    padding: rem(6) rem(17);
+    color: #fff;
+    font-size: rem(15);
+    vertical-align: 1px;
+    font-weight: 600;
+}
+
+.cf7__required {
+    background: #8E1616;
+}
+
+.cf7__optional {
+    background: #878787;
+}
+
+/* input・textarea */
+.cf7__list dd input[type="text"],
+.cf7__list dd input[type="tel"],
+.cf7__list dd input[type="email"],
+.cf7__list dd textarea {
+    width: 100%;
+    padding: rem(15) rem(20);
+    background: #E1E1E1;
+
+    @include mq(md) {
+        padding: rem(10) rem(20);
+    }
+}
+
+.cf7__list dd textarea {
+    height: rem(322);
+
+    @include mq(md) {
+        height: rem(153);
+    }
+}
+
+/* ドロップダウンメニュー */
+.cf7__select {
+    position: relative;
+}
+
+.cf7__select:before {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    z-index: 10;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-top: rem(8) solid #000;
+    border-right: rem(6) solid transparent;
+    border-left: rem(6) solid transparent;
+    pointer-events: none;
+    content: '';
+}
+
+.cf7__select select {
+    width: 100%;
+    padding: rem(13) rem(20);
+    background: #E1E1E1;
+    color: #333333;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    font-size: rem(18);
+    letter-spacing: .54px;
+
+    @include mq(md) {
+        padding: rem(8) rem(20);
+    }
+}
+
+/* チェックボックス・ラジオボタン */
+.cf7__list dd .wpcf7-checkbox,
+.cf7__list dd .wpcf7-radio {
+    display: block;
+    padding: rem(15) 0 rem(10);
+}
+
+/* 縦並び（チェックボックス・ラジオボタン） */
+.cf7__list dd .wpcf7-list-item {
+    display: block;
+    margin: 0;
+}
+
+.cf7__list dd .wpcf7-list-item:nth-child(n + 2) {
+    margin-top: rem(18);
+}
+
+/* マウスカーソル（チェックボックス・ラジオボタン） */
+.cf7__list dd .wpcf7-list-item label {
+    cursor: pointer;
+}
+
+/* チェックボックス・ラジオボタン */
+input[type="checkbox"],
+input[type="radio"] {
+    position: relative;
+    width: rem(18);
+    height: rem(18);
+    margin-right: rem(8);
+    border: 1px solid #bcbcbc;
+    vertical-align: rem(-3);
+    cursor: pointer;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+/* チェックボックス */
+input[type="checkbox"]:checked {
+    border: 1px solid #000;
+    background: #000;
+}
+
+input[type="checkbox"]:checked:before {
+    position: absolute;
+    top: rem(2);
+    left: rem(5);
+    transform: rotate(50deg);
+    width: rem(6);
+    height: rem(10);
+    border-right: rem(2) solid #fff;
+    border-bottom: rem(2) solid #fff;
+    content: '';
+}
+
+/* ラジオボタン */
+input[type="radio"] {
+    border-radius: 50%;
+}
+
+input[type="radio"]:checked:before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: rem(9);
+    height: rem(9);
+    border-radius: 50%;
+    background: #000;
+    content: '';
+}
+
+/* プレースホルダー */
+/* Google Chrome / Safari / Mozilla Firefox / Opera */
+.cf7__list dd input[type="text"]::placeholder,
+.cf7__list dd input[type="tel"]::placeholder,
+.cf7__list dd input[type="email"]::placeholder,
+.cf7__list dd textarea::placeholder {
+    color: #a5a5a5;
+}
+
+/* Microsoft Edge */
+.cf7__list dd input[type="text"]::-ms-input-placeholder,
+.cf7__list dd input[type="tel"]::-ms-input-placeholder,
+.cf7__list dd input[type="email"]::-ms-input-placeholder,
+.cf7__list dd textarea::-ms-input-placeholder {
+    color: #a5a5a5;
+}
+
+/* Internet Explorer */
+.cf7__list dd input[type="text"]:-ms-input-placeholder,
+.cf7__list dd input[type="tel"]:-ms-input-placeholder,
+.cf7__list dd input[type="email"]:-ms-input-placeholder,
+.cf7__list dd textarea:-ms-input-placeholder {
+    color: #a5a5a5;
+}
+
+/* 送信ボタン */
+.cf7__button {
+    text-align: center;
+}
+
+.wpcf7-spinner {
+    display: none !important;
+}
+
+input[type="submit"] {
+    width: rem(311);
+    height: rem(60);
+    height: rem(76);
+    background: #151F37;
+    color: #fff;
+    transition: opacity .6s;
+}
+
+input[type="submit"]:hover {
+    opacity: .6;
+}
+
+/* ajax-loader */
+.wpcf7-spinner {
+    vertical-align: middle;
+}
+
+@include mq(md) {
+    .cf7__list dt {
+        width: 100%;
+        margin-bottom: rem(15);
+        padding-top: 0;
+    }
+
+    .cf7__list dd {
+        width: 100%;
+    }
+
+    .cf7__list dd:nth-of-type(n + 2) {
+        margin-top: 0;
+    }
+
+    .cf7__list dd .wpcf7-checkbox,
+    .cf7__list dd .wpcf7-radio {
+        padding: rem(15) 0 0;
+    }
+
+    /* 送信ボタン */
+    input[type="submit"] {
+        width: rem(180);
+        height: rem(56);
+    }
+
+}

@@ -1,0 +1,53 @@
+/********************************
+* インナー
+********************************/
+$inner: 1320px;
+
+// 余白
+$padding-pc: 30px;
+$padding-sp: 27px;
+
+/********************************
+* フォント
+********************************/
+$base-font-family: "Noto Serif JP", serif;
+$sub-font-family: "Prata", serif;
+$third-font-family: "Noto Sans JP", sans-serif;
+;
+
+// フォントサイズ
+$base-font-size: 16;
+
+// フォントウェイト
+$bold: 700;
+$medium: 500;
+$regular: 400;
+
+/********************************
+* カラー
+********************************/
+$white: #fff;
+$white02: #F0EFEF;
+$white03: #F8F8F8;
+$white04: #D8D4D1;
+$black: #333;
+$black02: #151F37;
+$black03: #262626;
+$black04: #000;
+$gray: #AFAFAF;
+$gray02: #5E5E5E;
+$gray03: #968f8a;
+$brown: #CEC8C0;
+$brown02: #6F3C14;
+
+/********************************
+* レイヤー
+********************************/
+$layer-modal: 100;
+$layer-drawer: 40;
+$layer-floating: 30;
+$layer-header: 35;
+$layer-footer: 10;
+$layer-up: 2;
+$layer-default: 1;
+$layer-background: -1;

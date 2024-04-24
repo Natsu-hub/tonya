@@ -1,0 +1,33 @@
+@use "global" as *;
+
+.l-section {
+  padding-block: rem(176);
+
+  @include mq('md') {
+    padding-block: rem(96);
+  }
+}
+
+.l-section--small {
+  padding-block: rem(136);
+
+  @include mq('md') {
+    padding-block: rem(80);
+  }
+}
+
+.l-section--below {
+  padding-top: rem(136);
+  padding-bottom: rem(160);
+
+  @include mq(md) {
+    padding-top: rem(80);
+    padding-bottom: rem(80);
+  }
+
+  @include mq(sm) {
+    padding-top: rem(28);
+    padding-bottom: rem(80);
+  }
+
+}

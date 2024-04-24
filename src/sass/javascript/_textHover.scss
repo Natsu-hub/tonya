@@ -1,0 +1,49 @@
+@use "global" as *;
+
+.p-header__nav-item a {
+    display: block;
+    padding: 8px 12px;
+}
+
+.text-wrap {
+    overflow: hidden;
+}
+
+.p-header__nav-item a:hover,
+.p-header__nav-item a:hover span {
+    opacity: 1;
+
+}
+
+.p-header__nav-item a.is-active {
+    cursor: initial;
+}
+
+.text-wrap {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+}
+
+.before {
+    display: flex;
+    align-items: center;
+}
+
+.before span,
+.after span {
+    line-height: 1.5;
+    transition: color .3s ease-out;
+}
+
+.after span {
+    transform: translateY(100%);
+}

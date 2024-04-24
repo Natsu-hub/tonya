@@ -1,0 +1,32 @@
+@use "global" as *;
+
+.p-404 {
+    text-align: center;
+    color: $white02;
+    background-color: $black;
+}
+
+.p-404__title {
+    font-size: rem(68);
+
+    @include mq('md') {
+        font-size: rem(40);
+    }
+}
+
+.p-404__text {
+    font-size: rem(18);
+
+    @include mq('md') {
+        font-size: rem(16);
+    }
+}
+
+.p-404__btn {
+    margin-top: rem(120);
+    text-align: center;
+
+    @include mq(md) {
+        margin-top: rem(60);
+    }
+}
