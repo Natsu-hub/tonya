@@ -130,7 +130,8 @@
 
 
     @include mq('sm') {
-        display: none;
+        opacity: 0;
+        visibility: hidden;
     }
 }
 

@@ -174,7 +174,7 @@ const browserSyncInit = () => {
     // proxy: "http://moaru19.local/", // WordPressのローカルURLを設定
     // open: true,
     // stream: true,
-    proxy: 'http://saporuto.local/',  // Local by Flywheel のローカルURLに修正
+    proxy: 'http://tonya.local/',  // Local by Flywheel のローカルURLに修正
     open: true,
     notify: false, // 通知を非表示
     stream: true,  // ファイルの変更を自動的にリロード

@@ -67,6 +67,12 @@
     transition: color 0.3s ease 0s;
 }
 
+@media (hover: hover) {
+    .p-header__nav-item a:hover{
+        color: $red;
+    }
+}
+
 /* ドロワーメニューが開いた時のスタイル */
 // .p-header.is-drawer-open .p-header__logo {
 //     color: $white;
