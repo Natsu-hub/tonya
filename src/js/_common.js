@@ -12,7 +12,7 @@ export function common() {
         // フッター TOPスクロールボタン
         window.addEventListener("scroll", () => {
             const scrollTopButton = document.getElementById("js-scrollTop");
-            const isScrollingDown = window.scrollY > 400;
+            const isScrollingDown = window.scrollY > 200;
 
             if ((isScrollingDown && gsap.getProperty(scrollTopButton, "opacity") === 0) ||
                 (!isScrollingDown && gsap.getProperty(scrollTopButton, "opacity") === 1)) {

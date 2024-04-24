@@ -1,6 +1,4 @@
-<button class="c-to-top" id="js-scrollTop" title="トップへ戻る">
-  <span class="c-to-top__arrow"></span>
-</button>
+<!-- 
 <footer class="p-footer">
     <div class="p-footer__inner">
       <div class="p-footer__items">
@@ -84,7 +82,7 @@
       </div>
     </div>
     <small class="p-footer__copy-right">&copy; <?php echo date('Y'); ?>. saporuto</small>
-  </footer>
+  </footer> -->
   <?php wp_footer()?>
 </body>
 </html>

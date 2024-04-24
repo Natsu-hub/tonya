@@ -11,16 +11,15 @@ body {
     min-height: 100vh;
     font-family: $base-font-family;
     color: $black;
-    background: $black03;
+    background: $white;
     z-index: $layer-background;
     position: relative;
     line-height: calc(32 / 16);
     font-size: rem(16);
-    font-weight: 300;
+    font-weight: 400;
     opacity: 0;
 
     @include mq(md) {
-        background: $black02;
         font-size: rem(15);
         letter-spacing: 0.15px;
         min-height: 100svh;

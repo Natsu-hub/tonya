@@ -1,0 +1,123 @@
+@use "global" as *;
+
+.p-to-lineUp {
+    padding-block: rem(136);
+    position: relative;
+    height: inherit;
+
+    @include mq(md) {
+        padding-block: rem(46);
+    }
+
+    &::before {
+        content: "";
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        background-image: url(../images/common/bg-img.webp);
+        background-size: contain;
+        background-position: center;
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+
+        @include mq(md) {
+            background-image: url(../images/common/bg-img-sp.webp);
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100svh;
+        }
+    }
+}
+
+.p-to-lineup__inner {
+    @include mq(md) {
+        padding-inline: rem(27);
+    }
+}
+
+.p-to-lineUp__card {
+    border-radius: 32px;
+    background: rgba(251, 251, 251, 0.80);
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.20);
+    width: 100%;
+    max-width: rem(750);
+    margin-inline: auto;
+    padding: rem(48) rem(60);
+
+    @include mq(md) {
+        padding-top: rem(32);
+        padding-bottom: rem(40);
+        padding-inline: rem(32);
+    }
+}
+
+.p-to-lineUp__head {
+    font-size: rem(32);
+    line-height: 1.5;
+    font-weight: 500;
+    letter-spacing: .64px;
+
+    @include mq(md) {
+        letter-spacing: 0.36px;
+        font-size: rem(18);
+        line-height: 1.66;
+    }
+}
+
+
+.p-to-lineUp__text {
+    margin-top: rem(16);
+}
+
+.p-to-lineUp__btn {
+    padding: rem(12) rem(36) rem(12) rem(44);
+    display: inline-flex;
+    gap: rem(31);
+    align-items: center;
+    justify-content: center;
+    transition: border-color, color, .7s ease-out;
+    background: url("../images/common/red-bg.webp")no-repeat center center / cover;
+
+    @include mq(md) {
+        padding: rem(19) rem(21);
+    }
+}
+
+.p-to-lineUp__btn:after {
+    content: "";
+    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: rem(10);
+    height: rem(17);
+    transition: background-color 0.7s ease-out;
+    background: $yellow;
+    mask: url(../images/common/arrow-next.svg) no-repeat center center/cover;
+    -webkit-mask: url(../images/common/arrow-next.svg) no-repeat center center/cover;
+
+    @include mq(md) {
+        display: none;
+    }
+
+}
+
+.p-to-lineUp__link {
+    margin-top: rem(37);
+    font-size: rem(24);
+    font-weight: 700;
+    letter-spacing: .48px;
+    color: $yellow;
+    text-align: center;
+
+    @include mq(md) {
+        margin-top: rem(24);
+        font-size: rem(16);
+        letter-spacing: .32px;
+        line-height: 1;
+        width: 100%;
+    }
+}
