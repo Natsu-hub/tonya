@@ -78,11 +78,18 @@
     gap: rem(31);
     align-items: center;
     justify-content: center;
-    transition: border-color, color, .7s ease-out;
+    transition: all 0.3s ease-out 0s;
     background: url("../images/common/red-bg.webp")no-repeat center center / cover;
 
     @include mq(md) {
         padding: rem(19) rem(21);
+    }
+}
+
+@media (hover: hover) {
+    .p-to-lineUp__btn:hover {
+        opacity: 1;
+        background: url("../images/common/hover-red-bg.webp")no-repeat center center / cover;
     }
 }
 

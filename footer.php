@@ -1,6 +1,6 @@
 
 <footer class="p-footer">
-    <div class="p-footer__inner l-inner">
+    <div class="p-footer__inner">
     <div class="p-footer__container">
       <div class="p-footer__btn-labels">
         <div class="p-footer__btn-label">
@@ -65,6 +65,9 @@
                 <a href="<?php echo BLOG_URL; ?>">お弁当メニュー</a>
               </li>
               <li class="p-footer__nav-item">
+                <a href="<?php echo BLOG_URL; ?>">今月の献立</a>
+              </li>
+              <li class="p-footer__nav-item">
                 <a href="<?php echo HOME_URL; ?>">ご注文のしかた</a>
               </li>
               <li class="p-footer__nav-item">
@@ -82,9 +85,9 @@
           <div class="p-footer__contact-info">
             <p class="p-footer__contact-head">ご注文・お問合せ用電話ダイヤルはこちら</p>
             <div class="p-footer__contact-btn">
-              <a class="p-footer__contact-link" href="">
+              <a class="p-footer__contact-link"  href="tel:+027-388-0811">
                 <p class="p-footer__contact-tel">027-388-0811</p>
-                <p class="p-footer__contact-time">対応時間9:00-17:00 <br class="u-desktop">
+                <p class="p-footer__contact-time">対応時間9:00-17:00  <br class="u-desktop">
 定休日：土日祝日/年末年始<br>
 当日朝10時まで受付</p>
               </a>

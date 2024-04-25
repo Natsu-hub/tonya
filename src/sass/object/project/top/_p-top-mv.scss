@@ -48,4 +48,6 @@
     bottom: rem(130);
 }
 
-.p-top-mv__deco img {}
+.p-top-mv__deco img {
+    object-fit: cover;
+}

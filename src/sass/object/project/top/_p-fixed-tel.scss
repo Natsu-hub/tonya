@@ -91,6 +91,13 @@
     }
 }
 
+@media (hover: hover) {
+    .p-fixed-tel__text-tel a:hover {
+        opacity: 1;
+    }
+
+}
+
 .p-fixed-tel__text-tel img {
     display: block;
     max-width: rem(48);
@@ -130,8 +137,7 @@
 
 
     @include mq('sm') {
-        opacity: 0;
-        visibility: hidden;
+        display: none;
     }
 }
 
