@@ -47,131 +47,28 @@ function my_script_init()
 }
 add_action('wp_enqueue_scripts', 'my_script_init');
 
-//管理画面の投稿名を変更
-function Change_menulabel() {
-	global $menu;
-	global $submenu;
-	$name = 'お知らせ';
-	$menu[5][0] = $name;
-	$submenu['edit.php'][5][0] = $name.'一覧';
-	$submenu['edit.php'][10][0] = '新しい'.$name;
-	}
-	function Change_objectlabel() {
-	global $wp_post_types;
-	$name = 'お知らせ';
-	$labels = &$wp_post_types['post']->labels;
-	$labels->name = $name;
-	$labels->singular_name = $name;
-	$labels->add_new = _x('追加', $name);
-	$labels->add_new_item = $name.'の新規追加';
-	$labels->edit_item = $name.'の編集';
-	$labels->new_item = '新規'.$name;
-	$labels->view_item = $name.'を表示';
-	$labels->search_items = $name.'を検索';
-	$labels->not_found = $name.'が見つかりませんでした';
-	$labels->not_found_in_trash = 'ゴミ箱に'.$name.'は見つかりませんでした';
-	}
-	add_action( 'init', 'Change_objectlabel' );
-	add_action( 'admin_menu', 'Change_menulabel' );
 
-//タクソノミーをラジオボタンにする
-add_action( 'admin_print_footer_scripts', 'select_to_radio_genre' );
-function select_to_radio_genre() {
-?>
-<script type="text/javascript">
-jQuery(function($) {
-	// 投稿画面
-	$('#taxonomy-genre input[type="checkbox"]').each(function() {
-	  $(this).replaceWith($('<input type="radio" name="' + $(this).attr('name') + '" value="' + $(this).val() + '">').prop('checked', $(this).is(':checked')));
-	});
-	// 一覧画面
-	var genre_checklist = $('.genrechecklist input[type="checkbox"]');
-	genre_checklist.click(function() {
-	  genre_checklist.prop('checked', false);
-	  $(this).prop('checked', true);
-	});
-});
-</script>
-<?php
-}
-//投稿のカテゴリーもラジオボタンにする
-add_action( 'admin_print_footer_scripts', 'select_to_radio_category' );
-function select_to_radio_category() {
-?>
-<script type="text/javascript">
-jQuery(function($) {
-	// カテゴリーをラジオボタンにする
-	$('#category-all input[type="checkbox"]').each(function() {
-	  $(this).replaceWith($('<input type="radio" name="' + $(this).attr('name') + '" value="' + $(this).val() + '">').prop('checked', $(this).is(':checked')));
-	});
-});
-</script>
-<?php
+/**
+ * @param string $page_title ページのtitle属性値
+ * @param string $menu_title 管理画面のメニューに表示するタイトル
+ * @param string $capability メニューを操作できる権限（manage_options とか）
+ * @param string $menu_slug オプションページのスラッグ。ユニークな値にすること。
+ * @param string|null $icon_url メニューに表示するアイコンの URL
+ * @param int $position メニューの位置
+ */
+SCF::add_options_page( 'お弁当メニューぺージ', 'お弁当メニュー', 'manage_options', 'theme-options' );
+
+
+//管理画面の投稿を非表示
+function Hide_Post_Type() {
+    remove_menu_page('edit.php');
 }
 
+add_action('admin_menu', 'Hide_Post_Type');
 
+//SCF出力の画像サイズカスタマイズ
+function add_custom_image_sizes() {
+    add_image_size('custom-size', 800, 600, true); // 800x600ピクセルで画像を切り抜きます
+}
 
-// 検索条件が未入力時にsearch.phpにリダイレクトする
-function set_redirect_template(){
-	if (isset($_GET['s']) && empty($_GET['s'])) {
-	  include(TEMPLATEPATH . '/search.php');
-	  exit;
-	}
-  }
-  add_action('template_redirect', 'set_redirect_template');
-
-  //1ページに表示する最大投稿数
-  function my_pre_get_posts( $query ) {
-	if ( is_admin() || !$query->is_main_query() ) {
-	  return;
-	}
-	if ( $query->is_search() ) {
-	  $query->set( 'posts_per_page', 9 );
-	}
-  }
-  add_action('pre_get_posts','my_pre_get_posts');
-
-  // 検索条件のページタイプを指定する(通常投稿とカスタム投稿)
-function SearchFilter( $query ) {
-	if ( $query -> is_search ) {
-	  $query -> set( 'post_type', array('post','blog') );
-	}
-	return $query;
-  }
-  add_filter( 'pre_get_posts', 'SearchFilter' );
-
-    //date-blg.phpを機能させる
-	function custom_template_redirect() {
-		if (is_post_type_archive('blog') && is_date()) {
-			include(get_template_directory() . '/date-blog.php');
-			exit;
-		}
-	}
-	add_action('template_redirect', 'custom_template_redirect');
-	
-	function custom_rewrite_rules() {
-		add_rewrite_rule(
-			'blog/([0-9]{4})/([0-9]{2})/?$', 
-			'index.php?post_type=blog&year=$matches[1]&monthnum=$matches[2]', 
-			'top'
-		);
-	}
-	add_action('init', 'custom_rewrite_rules');
-
-  // Contact Form7の送信ボタンをクリックした後の遷移先設定
-  add_action( 'wp_footer', 'add_origin_thanks_page' );
-  function add_origin_thanks_page() {
-  $thanks = home_url('/contact-thanks/');
-	echo <<< EOC
-	  <script>
-		var thanksPage = {
-		  281: '{$thanks}',
-		};
-	  document.addEventListener( 'wpcf7mailsent', function( event ) {
-		location = thanksPage[event.detail.contactFormId];
-	  }, false );
-	  </script>
-	EOC;
-  }
-
-
+add_action('after_setup_theme', 'add_custom_image_sizes');

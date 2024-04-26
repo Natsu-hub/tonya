@@ -28,6 +28,8 @@ get_header(); ?>
       <div class="p-to-lineUp__link">
       <a href="" class="p-to-lineUp__btn">お弁当のラインナップを見る</a>
       </div>
+      <div class="p-to-lineUp__preload">
+      </div>
     </div>
   </div>
 </section>

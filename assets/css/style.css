@@ -674,6 +674,7 @@ body {
 .c-below-mv__main-title {
 	display: block;
 	font-size: 2.5rem;
+	font-weight: 700;
 	letter-spacing: 1.2px;
 	margin-top: 0.3125rem;
 }
@@ -686,6 +687,7 @@ body {
 
 .c-below-mv__img,
 .c-below-mv__img img {
+	display: block;
 	height: inherit;
 	min-height: inherit;
 }
@@ -716,7 +718,7 @@ body {
 }
 
 .c-big-bg {
-	background: url("../images/common/menu_bg.png") repeat center center/cover;
+	background: url("../images/below/menu_bg.png") repeat center center/contain;
 	height: 100%;
 	width: 100%;
 }
@@ -1621,15 +1623,14 @@ input[type=submit]:hover {
 	display: -webkit-flex;
 	display: -ms-flexbox;
 	display: flex;
-	-webkit-box-pack: justify;
-	-webkit-justify-content: space-between;
-	    -ms-flex-pack: justify;
-	        justify-content: space-between;
 	overflow: hidden;
 }
 
 .p-menu__img {
 	display: block;
+	-webkit-flex-shrink: 0;
+	    -ms-flex-negative: 0;
+	        flex-shrink: 0;
 	height: 100%;
 	max-width: 24.8125rem;
 	width: 100%;
@@ -1643,7 +1644,9 @@ input[type=submit]:hover {
 }
 
 .p-menu__body {
+	max-width: 42.625rem;
 	padding: 3rem 3.875rem 2.5rem 3.5rem;
+	width: 100%;
 }
 
 .p-menu__head {
@@ -1655,6 +1658,7 @@ input[type=submit]:hover {
 }
 
 .p-menu__content {
+	font-size: 1.125rem;
 	line-height: 1.77778;
 	margin-top: 1.125rem;
 }
@@ -2040,6 +2044,10 @@ input[type=submit]:hover {
 	grid-template-columns: repeat(2, 1fr);
 }
 
+.p-footer__btn-label {
+	background: #fff;
+}
+
 .p-footer__btn-link {
 	-webkit-box-align: center;
 	-webkit-align-items: center;
@@ -2059,8 +2067,8 @@ input[type=submit]:hover {
 	        justify-content: space-between;
 	line-height: 1.5;
 	padding: 1.9375rem 3.5rem 2.0625rem 7.375rem;
-	-webkit-transition: border-color, color, 0.7s ease-out;
-	transition: border-color, color, 0.7s ease-out;
+	-webkit-transition: border-color, color, 0.5s ease-out;
+	transition: border-color, color, 0.5s ease-out;
 	width: 100%;
 }
 
@@ -2615,6 +2623,16 @@ input[type=submit]:hover {
 	margin-top: 1rem;
 }
 
+/* ページ読み込み時に背景画像をプリロードするための隠し要素 */
+
+.p-to-lineUp__preload {
+	background: url("../images/common/hover-red-bg.webp") no-repeat center center/cover;
+	height: 0;
+	overflow: hidden;
+	position: absolute;
+	width: 0;
+}
+
 .p-to-lineUp__btn {
 	-webkit-box-align: center;
 	-webkit-align-items: center;
@@ -3037,6 +3055,10 @@ body {
 	min-height: 100svh;
 }
 
+.c-big-bg {
+	background: url("../images/below/menu_bg-sp.png") repeat center center/contain;
+}
+
 .c-btn {
 	font-size: 1rem;
 	gap: 1.625rem;
@@ -3227,13 +3249,16 @@ input[type=submit] {
 	width: 11.25rem;
 }
 
+.p-menu__box:not(:first-of-type) {
+	margin-top: 3.5rem;
+}
+
 .p-menu__items {
 	gap: 2rem 0;
 	margin-top: 2rem;
 }
 
 .p-menu__item {
-	border-radius: 18px;
 	-webkit-box-orient: vertical;
 	-webkit-box-direction: normal;
 	-webkit-flex-direction: column;
@@ -3242,6 +3267,9 @@ input[type=submit] {
 }
 
 .p-menu__img {
+	-webkit-flex-shrink: 1;
+	    -ms-flex-negative: 1;
+	        flex-shrink: 1;
 	max-width: 100%;
 }
 
@@ -3261,6 +3289,7 @@ input[type=submit] {
 }
 
 .p-menu__content {
+	font-size: 1rem;
 	margin-top: 1rem;
 }
 
