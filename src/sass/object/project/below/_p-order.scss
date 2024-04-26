@@ -1,0 +1,118 @@
+@use "global" as *;
+
+
+.p-order {
+    padding-top: rem(120);
+    padding-bottom: rem(160);
+    background-color: $white02;
+
+    @include mq(md) {
+        padding-top: rem(40);
+        padding-bottom: rem(80);
+    }
+}
+.p-order__lists {
+    display: grid;
+    gap: rem(48);
+
+    @include mq(md) {
+        padding-inline: rem(20);
+        gap: rem(32);
+
+    }
+}
+
+.p-order__list {
+    display: flex;
+    align-items: center;
+
+    @include mq(md) {
+        flex-direction: column;
+    }
+}
+
+.p-order__number {
+    position: relative;
+    z-index: 5;
+}
+
+
+.p-order__bg-img {
+    display: block;
+    width: rem(133);
+    height: rem(144);
+
+    @include mq(md) {
+        width: rem(56);
+        height: rem(56);
+    }
+
+}
+
+.p-order__bg-img img {
+    height: auto;
+    object-fit: contain;
+}
+
+
+.p-order__character {
+    line-height: 1;
+    color: $yellow;
+    font-family: $sub-font-family;
+    font-size: rem(56);
+    font-weight: 700;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+
+    @include mq(md) {
+        font-size: rem(24);
+    }
+}
+
+.p-order__box {
+    max-width: rem(946);
+    width: 100%;
+    border-radius: 32px;
+    background: $white;
+    box-shadow: 0px 4px 6px 0px rgba(100, 87, 62, 0.30);
+    margin-left: rem(-77);
+    padding: rem(47) rem(76) rem(63) rem(137);
+
+    @include mq(md) {
+        margin-left: 0;
+        padding: rem(51) rem(31) rem(40) rem(41);
+        border-radius: 18px;
+        margin-top: rem(-28);
+    }
+}
+
+.p-order__head {
+    font-size: rem(32);
+    font-weight: 500;
+    letter-spacing: .64px;
+    line-height: 1.5;
+    padding-bottom: rem(15);
+    border-bottom: 1px solid $gray;
+
+    @include mq(md) {
+        letter-spacing: 0.36px;
+        line-height: 1.66;
+        font-size: rem(18);
+        padding-bottom: rem(10);
+    }
+
+}
+
+.p-order__text {
+    margin-top: rem(30);
+    font-size: rem(24);
+    line-height: 1.66;
+
+    @include mq(md) {
+        margin-top: rem(16);
+        font-size: rem(15);
+        line-height: 2;
+    }
+}

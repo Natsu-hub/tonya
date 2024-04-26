@@ -102,7 +102,7 @@
 
     @include mq(md) {
         margin-top: rem(16);
-        font-size: rem(16);
+        font-size: rem(15);
     }
 }
 
@@ -188,4 +188,257 @@
     font-size: rem(12);
     text-align: right;
     display: block;
+}
+
+
+
+.p-menu__monthly {}
+
+.p-menu-monthly {}
+
+.p-monthly-menu__items {
+    margin-top: rem(72);
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: rem(48) 0;
+
+    @include mq(md) {
+        margin-top: rem(35);
+        gap: rem(18) 0;
+
+    }
+}
+
+.p-monthly-menu__item {
+    border-radius: 32px;
+    background: $white;
+    overflow: hidden;
+
+    @include mq(md) {
+        border-radius: 18px;
+    }
+}
+
+.p-monthly-menu__item a {
+    box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.20);
+    display: block;
+    padding: rem(57) rem(34) rem(52);
+
+    @include mq(md) {
+        padding: rem(18) rem(18) rem(13);
+    }
+
+}
+
+.p-monthly-menu__item--top a {
+    background: url(../images/below/menu_img01.jpg) no-repeat center right/contain;
+}
+
+.p-monthly-menu__item--bottom a {
+    background: url(../images/below/menu_img02.png) no-repeat center right/contain;
+}
+
+.p-monthly-menu__head {
+    font-family: $sub-font-family;
+    font-weight: 500;
+    position: relative;
+    width: fit-content;
+
+    @include mq(md) {
+        width: 100%;
+        line-height: 1.2;
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        background: url(../images/below/black-arrow.svg) no-repeat center center/contain;
+        width: rem(12);
+        height: rem(20);
+        top: 50%;
+        transform: translateY(-50%);
+        right: rem(-40);
+
+        @include mq(md) {
+            width: rem(8);
+            height: rem(12);
+            right: rem(23);
+            top: 80%;
+            transform: translateY(0);
+        }
+    }
+}
+
+.p-monthly-menu__head strong {
+    color: $red03;
+    font-size: rem(48);
+    letter-spacing: 0.96px;
+    font-weight: 500;
+
+    @include mq(md) {
+        font-size: rem(27);
+        letter-spacing: 0.54px;
+    }
+}
+
+.p-monthly-menu__head small {
+    font-size: rem(32);
+    letter-spacing: 5.12px;
+
+    @include mq(md) {
+        letter-spacing: 2.88px;
+        font-size: rem(18);
+    }
+}
+
+.p-monthly-menu__head span {
+    letter-spacing: 0.96px;
+    font-size: rem(48);
+
+    @include mq(md) {
+        letter-spacing: 0.54px;
+        font-size: rem(27);
+    }
+}
+
+.p-monthly-menu__label-item {
+    margin-top: rem(57);
+    display: flex;
+    align-items: flex-end;
+
+    @include mq(md) {
+        margin-top: rem(14);
+        align-items: flex-start;
+    }
+}
+
+.p-monthly-menu__label {
+    display: block;
+    border: 2px solid $brown02;
+    border: 2px solid $brown02;
+    padding: rem(7) rem(13);
+    border-radius: 18px;
+    color: $brown02;
+    line-height: 1;
+    font-weight: 500;
+    white-space: nowrap;
+
+    @include mq(md) {
+        border: 1px solid $brown02;
+        font-size: rem(12);
+        padding: rem(5) rem(9);
+    }
+}
+
+.p-monthly-menu__label-item small {
+    display: block;
+    margin-left: rem(18);
+    font-size: rem(12);
+
+    @include mq(md) {
+        margin-left: rem(12);
+        font-size: rem(9);
+        line-height: 1.55;
+    }
+}
+
+.p-menu__box {
+    @include mq(md) {
+        padding-inline: rem(17);
+    }
+}
+
+
+.p-menu__title {}
+
+.c-common-title {}
+
+.p-monthly-menu__lists {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: rem(39) rem(32);
+    margin-top: rem(48);
+
+    @include mq(md) {
+        gap: rem(12) 0;
+        margin-top: rem(32);
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+.p-monthly-menu__list {
+    border-radius: 16px;
+    background: #FFF;
+    box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.20);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: rem(23) rem(32) rem(26) rem(37);
+    font-weight: 500;
+
+    @include mq(md) {
+        padding: rem(21) rem(23);
+        border-radius: 10px;
+    }
+}
+
+.p-monthly-menu__date {
+    font-size: rem(27);
+    line-height: 50px;
+    /* 185.185% */
+    letter-spacing: 0.54px;
+
+    @include mq(md) {
+        letter-spacing: 0.32px;
+        font-size: rem(16);
+    }
+}
+
+.p-monthly-menu__links {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0 rem(17);
+
+    @include mq(md) {
+        gap: 0 rem(10);
+    }
+}
+
+.p-monthly-menu__link {
+    border-radius: 10px;
+    font-size: rem(21);
+    letter-spacing: 0.42px;
+    padding: rem(3) rem(6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+    line-height: 1.5;
+
+    @include mq(md) {
+        border-radius: 6px;
+        padding: rem(3) rem(8);
+        letter-spacing: 0.24px;
+        font-size: rem(12);
+    }
+}
+
+.p-monthly-menu__link--red {
+    border: 2px solid $red;
+    color: $red;
+
+    @include mq(md) {
+        border: 1px solid $red;
+    }
+}
+
+.p-monthly-menu__link--blue {
+    border: 2px solid $blue;
+    color: $blue;
+
+    @include mq(md) {
+        border: 1px solid $blue;
+
+    }
+
 }

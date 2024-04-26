@@ -48,17 +48,6 @@ function my_script_init()
 add_action('wp_enqueue_scripts', 'my_script_init');
 
 
-/**
- * @param string $page_title ページのtitle属性値
- * @param string $menu_title 管理画面のメニューに表示するタイトル
- * @param string $capability メニューを操作できる権限（manage_options とか）
- * @param string $menu_slug オプションページのスラッグ。ユニークな値にすること。
- * @param string|null $icon_url メニューに表示するアイコンの URL
- * @param int $position メニューの位置
- */
-SCF::add_options_page( 'お弁当メニューぺージ', 'お弁当メニュー', 'manage_options', 'theme-options' );
-
-
 //管理画面の投稿を非表示
 function Hide_Post_Type() {
     remove_menu_page('edit.php');
