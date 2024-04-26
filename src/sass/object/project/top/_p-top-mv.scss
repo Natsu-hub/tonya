@@ -1,14 +1,15 @@
 @use "global" as *;
 
 .p-top-mv {
-    margin-top: rem(60);
+    padding-top: rem(60);
     position: relative;
     width: 100%;
     height: 100vh;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 
     @include mq(md) {
         height: 100svh;
-        margin-top: 0;
+        padding-top: 0;
     }
 }
 
@@ -43,11 +44,23 @@
 }
 
 .p-top-mv__deco {
-    display: block;
     position: absolute;
-    bottom: rem(130);
+    bottom: rem(57);
+    width: 100%;
+    height: rem(72);
+    background: url("../images/common/mv-deco.svg")no-repeat center center / contain;
 }
 
-.p-top-mv__deco img {
-    object-fit: cover;
+.p-top-mv__deco span {
+    display: block;
+    width: 100%;
+    height: 4px;
+    background-color: #8E1616;
+    top: 55%;
+    transform: translateY(-50%);
+    position: absolute;
 }
+
+// .p-top-mv__deco img {
+//     object-fit: cover;
+// }

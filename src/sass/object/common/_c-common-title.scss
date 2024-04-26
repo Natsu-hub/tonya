@@ -1,25 +1,55 @@
 @use "global" as *;
 
 .c-common-title {
-  font-size: rem(64);
-  line-height: 1.3;
-  letter-spacing: 1.92px;
-  font-family: $sub-font-family;
+  color: $red03;
+  font-size: rem(32);
+  font-weight: 500;
+  line-height: 1.5625;
+  letter-spacing: 0.64px;
 
-  @include mq(md) {
-    letter-spacing: 1.44px;
-    font-size: rem(48);
+  @include mq(sm) {
+    letter-spacing: .18px;
+    font-size: rem(18);
   }
 }
 
-.c-common-title--black {
-  color: $black;
-}
+.c-common-title span {
+  display: inline-flex;
+  -moz-column-gap: rem(38);
+  column-gap: rem(38);
+  align-items: center;
+  justify-content: center;
 
-.c-common-title--white {
-  color: $white02;
-}
+  @include mq(md) {
+    -moz-column-gap: rem(23);
+    column-gap: rem(23);
+  }
 
-.c-common-title--white04 {
-  color: $white04;
+  &::after {
+    content: "";
+    background: url(../images/common/title-deco-right.svg)no-repeat center center / contain;
+    width: rem(71);
+    height: rem(36);
+    display: inline-block;
+    transition: all 0.3s ease 0s;
+
+    @include mq('md') {
+      width: rem(41);
+      height: rem(26);
+    }
+  }
+
+  &::before {
+    content: "";
+    background: url(../images/common/title-deco-left.svg)no-repeat center center / contain;
+    width: rem(71);
+    height: rem(36);
+    display: inline-block;
+    transition: all 0.3s ease 0s;
+
+    @include mq('md') {
+      width: rem(41);
+      height: rem(26);
+    }
+  }
 }

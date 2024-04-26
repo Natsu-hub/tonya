@@ -34,6 +34,15 @@ export function common() {
             });
         });
 
+       // change-colorアニメーション
+       window.addEventListener('scroll', function () {
+        if (document.querySelector('.js-mv').offsetHeight < window.scrollY) {
+            document.querySelector('.js-fixed-tel-wrapper').classList.add('is-active');
+        } else {
+            document.querySelector('.js-fixed-tel-wrapper').classList.remove('is-active');
+        }
+    });
+
         // 電話PC時は無効
         var ua = navigator.userAgent.toLowerCase();
         var isMobile = /iphone/.test(ua) || /android(.+)?mobile/.test(ua);

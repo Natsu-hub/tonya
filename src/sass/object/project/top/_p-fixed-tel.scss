@@ -12,7 +12,19 @@
         bottom: 0;
         width: 100%;
     }
+}
 
+.js-fixed-tel-wrapper {
+    @include mq(md) {
+        opacity: 0;
+        transition: all 1s ease 0s;
+    }
+}
+
+.js-fixed-tel-wrapper.is-active {
+    @include mq(md) {
+        opacity: 1;
+    }
 }
 
 .p-fixed-tel {
@@ -136,7 +148,7 @@
     opacity: 0;
 
 
-    @include mq('sm') {
+    @include mq('md') {
         display: none;
     }
 }

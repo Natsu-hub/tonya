@@ -15,32 +15,9 @@ get_header(); ?>
             <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/logo.png" alt="問屋町食堂" width="320" height="320">
         </picture>
       </h1>
-      <picture class="p-top-mv__deco">
-          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/mv-deco.svg" alt="">
-      </picture>
+      <div class="p-top-mv__deco"><span></span>
+      </div>
     </section>
-
-<!-- p-fixed-tel -->
-<div class="p-fixed-tel-wrapper">
-  <div class="p-fixed-tel">
-    <picture class="p-fixed-tel__icon">
-        <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/common/icon-tel.webp" type="image/webp">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/icon-tel.png" alt="電話のアイコン" width="30" height="30">
-      </picture>
-      <div class="p-fixed-tel__text-tel">
-        <p>ご注文<br class="u-mobile">ダイヤル</p>
-        <a href="tel:+027-388-0811">
-         <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/fixed-tel-img.svg" alt="電話をかける" width="48" height="645">
-         <span class="u-mobile">027-388-0811</span>
-        </a>
-    </div>
-    <button class="p-fixed-tel__to-top" id="js-scrollTop" title="トップへ戻る">
-      <span class="p-fixed-tel__arrow"></span>
-    </button>
-  </div>
-  <div class="p-fixed-tel__info u-mobile">対応時間9:00-17:00  ｜  定休日：土日祝日/年末年始   |   当日朝10時まで受付
-  </div>
-</div>
 
 <!-- p-to-lineUp -->
 <section class="p-to-lineUp">
@@ -99,18 +76,8 @@ get_header(); ?>
   </div>
 </section>
 
-<!-- p-top-service -->
-<section class="p-top-service">
-  <div class="p-top-service__bg">
-    <div class="p-top-service__inner l-inner">
-      <h2 class="p-top-service__head">高齢者施設向けサービス</h2>
-      <div class="p-top-service__text">高齢者施設へのお食事のお届け、定期販売も賜ります。</div>
-      <div class="p-top-service__link">
-            <a href="" class="c-btn c-btn--blue">詳しくはこちら</a>
-          </div>
-    </div>
-  </div>
-</section>
+<!-- p-bottom-service -->
+  <?php get_template_part('template/bottom-service'); ?>
 
 </main>
 <?php get_footer(); ?>

@@ -189,13 +189,12 @@ function animation() {
       gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.fromTo(element, {
         autoAlpha: 0
       }, {
-        delay: .2,
         autoAlpha: 1,
-        duration: 1.5,
+        duration: 3,
         scrollTrigger: {
           trigger: element,
           // トリガーとなる要素を指定
-          start: "top 85%" // スクロール開始位置を指定
+          start: "top bottom" // スクロール開始位置を指定
         }
       });
     });
@@ -291,6 +290,15 @@ function common() {
           autoKill: false
         }
       });
+    });
+
+    // change-colorアニメーション
+    window.addEventListener('scroll', function () {
+      if (document.querySelector('.js-mv').offsetHeight < window.scrollY) {
+        document.querySelector('.js-fixed-tel-wrapper').classList.add('is-active');
+      } else {
+        document.querySelector('.js-fixed-tel-wrapper').classList.remove('is-active');
+      }
     });
 
     // 電話PC時は無効

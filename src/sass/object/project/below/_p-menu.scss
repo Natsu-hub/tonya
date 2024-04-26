@@ -1,0 +1,180 @@
+@use "global" as *;
+
+.p-menu {}
+
+.p-menu__inner {}
+
+.l-inner--small {}
+
+.p-menu__box {}
+
+.p-menu__box:not(:first-of-type) {
+    margin-top: rem(120);
+}
+
+.p-menu__title {
+    text-align: center;
+}
+
+.c-common-title {}
+
+.p-menu__items {
+    margin-top: rem(72);
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: rem(40) 0;
+
+    @include mq(md) {
+        gap: rem(32) 0;
+        margin-top: rem(32);
+    }
+}
+
+.p-menu__item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 32px;
+    overflow: hidden;
+    background: $white;
+    box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.20);
+
+    @include mq(md) {
+        border-radius: 18px;
+        flex-direction: column;
+    }
+}
+
+.p-menu__img {
+    max-width: rem(397);
+    width: 100%;
+    display: block;
+    height: 100%;
+
+    @include mq(md) {
+        max-width: 100%;
+    }
+}
+
+.p-menu__img img {
+    object-fit: cover;
+    aspect-ratio: 397/443;
+    height: 100%;
+
+    @include mq(md) {
+        aspect-ratio: 320/190;
+    }
+}
+
+.p-menu__body {
+    padding: rem(48) rem(62) rem(40) rem(56);
+
+    @include mq(md) {
+        padding: rem(24) rem(31) rem(21) rem(41);
+    }
+}
+
+.p-menu__head {
+    font-size: rem(27);
+    font-weight: 500;
+    line-height: 1.85185;
+    letter-spacing: 0.54px;
+    border-bottom: 1px solid #C0C0C0;
+
+    @include mq(md) {
+        font-size: rem(18);
+        letter-spacing: .36px;
+        line-height: 1.66;
+        padding-bottom: rem(12);
+    }
+}
+
+.p-menu__content {
+    line-height: 1.77778;
+    margin-top: rem(18);
+
+    @include mq(md) {
+        margin-top: rem(16);
+    }
+}
+
+.p-menu__price {
+    margin-top: rem(34);
+    line-height: 1;
+
+    @include mq(md) {
+        margin-top: rem(16);
+    }
+}
+
+.p-menu__price-item {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.p-menu__price-item:not(:first-child) {
+    margin-top: rem(14);
+}
+
+.p-menu__price-rice {
+    padding: rem(7) rem(10);
+    font-size: rem(18);
+    font-weight: 500;
+    border-radius: 18px;
+    border: 2px solid $black;
+
+    @include mq(md) {
+        padding: rem(2) rem(8);
+        font-size: rem(12);
+        line-height: 1.5;
+    border: 1px solid $black;
+    }
+}
+
+.p-menu__price-info {
+    margin-left: rem(17);
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    color: $red;
+    font-weight: 500;
+    @include mq(md) {
+        margin-left: rem(14);
+    }
+
+}
+
+.p-menu__price-yen {
+    font-size: rem(24);
+    letter-spacing: 0.48px;
+    padding-bottom: rem(3);
+}
+
+.p-menu__price-number {
+    margin-left: rem(6);
+    font-size: rem(48);
+    letter-spacing: .96px;
+    @include mq(md) {
+        font-size: rem(38);
+        letter-spacing: 0.76px;
+    }
+}
+
+.p-menu__price-tax {
+    margin-left: rem(6);
+    letter-spacing: 0.48px;
+    font-size: rem(18);
+    writing-mode: vertical-rl;
+    @include mq(md) {
+        font-size: rem(13);
+        letter-spacing: 0.26px;
+    }
+}
+
+.p-menu__text {
+    margin-top: rem(20);
+    font-size: rem(12);
+    text-align: right;
+    display: block;
+}

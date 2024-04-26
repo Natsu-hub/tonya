@@ -4,7 +4,7 @@
     position: relative;
     height: rem(400);
 
-    @include mq(md) {
+    @include mq(sm) {
         height: rem(160);
     }
 }
@@ -19,31 +19,27 @@
     left: calc(50% - min(50vw, #{rem(690)}));
     position: absolute;
     z-index: 2;
-    bottom: rem(40);
-    color: $white02;
-    padding-left: rem(20);
-    border-left: 1px solid $white02;
-    margin-left: rem(30);
+    bottom: rem(128);
+    color: $red03;
+    margin-left: rem(50);
     line-height: 1.5;
 
-    @include mq(md) {
+    @include mq(sm) {
         margin-left: 0;
-        left: rem(20);
-        bottom: rem(13);
-        left: rem(10);
-        padding-left: rem(10);
+        bottom: rem(50);
+        left: rem(30);
     }
 }
 
 .c-below-mv__main-title {
-    font-size: rem(48);
+    font-size: rem(40);
     margin-top: rem(5);
-    letter-spacing: 1.44px;
+    letter-spacing: 1.2px;
     display: block;
 
-    @include mq(md) {
-        font-size: rem(20);
-        letter-spacing: 0.6px;
+    @include mq(sm) {
+        font-size: rem(18);
+        letter-spacing: 0.54px;
         margin-top: 0;
     }
 }
@@ -53,7 +49,7 @@
     letter-spacing: 0.72px;
     display: block;
 
-    @include mq(md) {
+    @include mq(sm) {
         font-size: rem(12);
         letter-spacing: 0.48px;
     }
@@ -68,4 +64,32 @@
 .c-below-mv__img img {
     width: 100%;
     object-fit: cover;
+}
+
+.c-below-mv__deco {
+    position: absolute;
+    bottom: rem(-36);
+    width: 100%;
+    height: rem(72);
+    background: url("../images/common/mv-deco.svg")no-repeat center center / contain;
+
+    @include mq(sm) {
+        height: rem(37);
+        bottom: rem(-18);
+
+    }
+}
+
+.c-below-mv__deco span {
+    display: block;
+    width: 100%;
+    height: 4px;
+    background-color: #8E1616;
+    top: 55%;
+    transform: translateY(-50%);
+    position: absolute;
+
+    @include mq(sm) {
+        height: 2px;
+    }
 }

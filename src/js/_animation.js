@@ -200,12 +200,11 @@ export function animation() {
           autoAlpha: 0,
         },
         {
-          delay: .2,
           autoAlpha: 1,
-          duration: 1.5,
+          duration: 3,
           scrollTrigger: {
             trigger: element, // トリガーとなる要素を指定
-            start: "top 85%", // スクロール開始位置を指定
+            start: "top bottom", // スクロール開始位置を指定
           },
         }
       );

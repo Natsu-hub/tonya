@@ -72,3 +72,25 @@
             </nav>
         </div>
     </header>
+
+    <!-- p-fixed-tel -->
+<div class="p-fixed-tel-wrapper js-fixed-tel-wrapper">
+  <div class="p-fixed-tel">
+    <picture class="p-fixed-tel__icon">
+        <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/common/icon-tel.webp" type="image/webp">
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/icon-tel.png" alt="電話のアイコン" width="30" height="30">
+      </picture>
+      <div class="p-fixed-tel__text-tel">
+        <p>ご注文<br class="u-mobile">ダイヤル</p>
+        <a href="tel:+027-388-0811">
+         <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/fixed-tel-img.svg" alt="電話をかける" width="48" height="645">
+         <span class="u-mobile">027-388-0811</span>
+        </a>
+    </div>
+    <button class="p-fixed-tel__to-top" id="js-scrollTop" title="トップへ戻る">
+      <span class="p-fixed-tel__arrow"></span>
+    </button>
+  </div>
+  <div class="p-fixed-tel__info u-mobile">対応時間9:00-17:00  ｜  定休日：土日祝日/年末年始   |   当日朝10時まで受付
+  </div>
+</div>
