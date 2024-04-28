@@ -32,11 +32,11 @@ $page_slug = $post->post_name;
         <picture class="p-group-mv__img">
             <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/below/group-mv-sp.webp" type="image/webp"  media="(max-width: 730px)">
             <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/below/group-mv.webp" type="image/webp">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/below/group-mv.png" alt="" width="1440" height="676">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/below/group-mv.png" alt="高齢者施設でのお食事提供のイメージ画像" width="1440" height="676">
         </picture>
       </div>
-    </div>
     <div class="p-group-mv__deco"><span></span>
+  </div>
     </section>
 
 <!-- p-group-service -->
@@ -90,7 +90,7 @@ $page_slug = $post->post_name;
           <div class="p-group-point__card">
             <div class="p-group-point__head">
               <div class="p-group-point__head-character">1</div>
-              <h2 class="p-group-point__head-text">栄養バランスや旬を考えた毎月の献立</h2>
+              <h3 class="p-group-point__head-text">栄養バランスや旬を考えた毎月の献立</h3>
             </div>
               <div class="p-group-point__content-text">飽きがこないよう、おかずの種類を数百種以上取りそろえています。その時期に食べるのが一番美味しい旬のものを取り入れ、季節に合わせて彩り豊かなメニューを用意しております。</div>
           </div>
@@ -104,7 +104,7 @@ $page_slug = $post->post_name;
           <div class="p-group-point__card">
             <div class="p-group-point__head">
               <div class="p-group-point__head-character">2</div>
-              <h2 class="p-group-point__head-text">毎日手作業でダシをとりあたたかな手作りの味</h2>
+              <h3 class="p-group-point__head-text">毎日手作業でダシをとりあたたかな手作りの味</h3>
             </div>
               <div class="p-group-point__content-text">和食中心の献立で、国産のカツオと昆布で毎日ダシをとってお作りしています。手作りを基本とした家庭的な味をお届けしています。</div>
           </div>
@@ -118,7 +118,7 @@ $page_slug = $post->post_name;
           <div class="p-group-point__card">
             <div class="p-group-point__head">
               <div class="p-group-point__head-character">3</div>
-              <h2 class="p-group-point__head-text">農家も喜ぶ全量買取契約栽培</h2>
+              <h3 class="p-group-point__head-text">農家も喜ぶ全量買取契約栽培</h3>
             </div>
               <div class="p-group-point__content-text">生鮮野菜は国産野菜を指定し納入。また、農家さんと直接契約・全量買取することでコストダウンが可能。生産者がわかるので安心して提供できます。</div>
           </div>
@@ -132,7 +132,7 @@ $page_slug = $post->post_name;
           <div class="p-group-point__card">
             <div class="p-group-point__head">
               <div class="p-group-point__head-character">4</div>
-              <h2 class="p-group-point__head-text">とにかく作業が簡単</h2>
+              <h3 class="p-group-point__head-text">とにかく作業が簡単</h3>
             </div>
               <div class="p-group-point__content-text">工場直送方式の場合は完全調理品をチルドパックでお届け。タッパー方式は私たちが食材ごとにタッパーにまとめて配送するので現場では盛り付けるだけ。お弁当方式はそのまま提供できるのでさらに便利。デイサービス利用者の夕食分としてお弁当を提供していただくことも可能です。</div>
           </div>
@@ -146,7 +146,7 @@ $page_slug = $post->post_name;
           <div class="p-group-point__card">
             <div class="p-group-point__head">
               <div class="p-group-point__head-character">5</div>
-              <h2 class="p-group-point__head-text">バリエーション豊富なお食事の種類</h2>
+              <h3 class="p-group-point__head-text">バリエーション豊富なお食事の種類</h3>
             </div>
               <div class="p-group-point__content-text">刻み食・ミキサー食・ムース食・医療対応食など、ご利用者様が安心してお召し上がりいただけるようさまざまなバリエーションのお食事をご用意しております。<br>季節の行事食やセレクトメニューもございます。</div>
           </div>
@@ -160,7 +160,7 @@ $page_slug = $post->post_name;
           <div class="p-group-point__card">
             <div class="p-group-point__head">
               <div class="p-group-point__head-character">6</div>
-              <h2 class="p-group-point__head-text">毎日お届けするため大きなスペースは不要</h2>
+              <h3 class="p-group-point__head-text">毎日お届けするため大きなスペースは不要</h3>
             </div>
               <div class="p-group-point__content-text">直送方式でのご注文の場合は喫食日の２日前を目安にお届けをいたします。また、タッパー方式及び弁当方式の場合は当日納品となりますので、広いパントリースペースは必要ありません。</div>
           </div>

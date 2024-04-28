@@ -104,11 +104,11 @@ get_header(); ?>
             </div>
             <div class="p-service-list__item-wrap">
                 <h3 class="p-service-list__item-title js-fadeIn">就労継続支援事業</h3>
-                <p class="p-service-list__item-text js-fadeIn">【アドフューチャー】は、就労継続支援A型事業所・就労継続支援B型事業所という障がいのある方に就労の機会を提供する事業です。「脱福祉作業所」をコンセプトに、明るく開放的な環境で、様々な仕事を通じて適正を見つけ、より高い収入を目指してキャリアアップできる仕組みにより、就労意欲の高い集団で稼げる事業所を目指します。</p>
+                <p class="p-service-list__item-text js-fadeIn">【問屋町食堂】は、就労継続支援A型事業所・就労継続支援B型事業所という障がいのある方に就労の機会を提供する事業です。「脱福祉作業所」をコンセプトに、明るく開放的な環境で、様々な仕事を通じて適正を見つけ、より高い収入を目指してキャリアアップできる仕組みにより、就労意欲の高い集団で稼げる事業所を目指します。</p>
               <div class="p-service-list__btn js-fadeIn"><a class="c-btn-white" href="https://addfuture.saporuto.com" target="_blank" rel="noopener noreferrer">
-                  <p class="c-btn-white__text">アドフューチャー ホームページへ</p>
+                  <p class="c-btn-white__text">問屋町食堂 ホームページへ</p>
                   <picture class="c-btn-white__img">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/white_arrow.svg" alt="アドフューチャー ホームページへ" width="202" height="10" loading="lazy">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/white_arrow.svg" alt="問屋町食堂 ホームページへ" width="202" height="10" loading="lazy">
                   </picture>
                 </a>
               </div>

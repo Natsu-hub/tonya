@@ -27,13 +27,13 @@
           <?php if ( is_front_page() ) : ?>
                 <picture class="p-footer__logo-img">
                 <a href="#body">
-                  <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/logo-white.png" alt="アドフューチャー" width="103" height="90" data-alt-src="<?php echo get_template_directory_uri(); ?>/assets/images/common/header-logo-black.png">
+                  <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/logo-white.png" alt="問屋町食堂" width="103" height="90" data-alt-src="<?php echo get_template_directory_uri(); ?>/assets/images/common/header-logo-black.png">
                 </a>
             </picture>
             <?php else : ?>
                 <picture class="p-footer__logo-img">
                     <a href="<?php echo HOME_URL; ?>">
-                      <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/logo-white.png" alt="アドフューチャー" width="103" height="90" data-alt-src="<?php echo get_template_directory_uri(); ?>/assets/images/common/header-logo-black.png">
+                      <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/logo-white.png" alt="問屋町食堂" width="103" height="90" data-alt-src="<?php echo get_template_directory_uri(); ?>/assets/images/common/header-logo-black.png">
                     </a>
                 </picture>
             <?php endif; ?>
