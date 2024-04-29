@@ -24,19 +24,19 @@
                 <nav class="p-header__nav">
                     <ul class="p-header__nav-items">
                         <li class="p-header__nav-item">
-                            <a href="<?php echo BLOG_URL; ?>">お弁当メニュー</a>
+                            <a href="<?php echo MENU_URL; ?>">お弁当メニュー</a>
                         </li>
                         <li class="p-header__nav-item">
-                            <a href="<?php echo HOME_URL; ?>">今日の献立</a>
+                            <a href="<?php echo MONTHLY_URL; ?>">今日の献立</a>
                         </li>
                         <li class="p-header__nav-item">
-                            <a href="<?php echo WORKS_URL; ?>">ご注文のしかた</a>
+                            <a href="<?php echo USE_URL; ?>">ご注文のしかた</a>
                         </li>
                         <li class="p-header__nav-item">
-                            <a href="<?php echo BLOG_URL; ?>">よくあるご質問</a>
+                            <a href="<?php echo FAQ_URL; ?>">よくあるご質問</a>
                         </li>
                         <li class="p-header__nav-item">
-                            <a href="<?php echo HOME_URL; ?>">お問い合わせ</a>
+                            <a href="https://saporuto.com/contact/" target="_blank" rel="noopener noreferrer">>お問い合わせ</a>
                         </li>
                     </ul>
                 </nav>
@@ -51,22 +51,22 @@
             <nav class="p-header__drawer-nav">
                 <ul class="p-header__drawer-items">
                     <li class="p-header__drawer-item">
-                        <a class="p-header__drawer-link" href="<?php echo BLOG_URL; ?>">サイトトップ</a>
+                        <a class="p-header__drawer-link" href="<?php echo HOME_URL; ?>">サイトトップ</a>
                     </li>
                     <li class="p-header__drawer-item">
-                        <a class="p-header__drawer-link" href="<?php echo BLOG_URL; ?>">お弁当メニュー</a>
+                        <a class="p-header__drawer-link" href="<?php echo MENU_URL; ?>">お弁当メニュー</a>
                     </li>
                     <li class="p-header__drawer-item">
-                        <a class="p-header__drawer-link" href="<?php echo WORKS_URL; ?>">今日の献立</a>
+                        <a class="p-header__drawer-link" href="<?php echo MONTHLY_URL; ?>">今日の献立</a>
                     </li>
                     <li class="p-header__drawer-item">
-                        <a class="p-header__drawer-link" href="<?php echo CONTACT_URL; ?>">ご注文のしかた</a>
+                        <a class="p-header__drawer-link" href="<?php echo USE_URL; ?>">ご注文のしかた</a>
                     </li>
                     <li class="p-header__drawer-item">
-                        <a class="p-header__drawer-link" href="<?php echo BLOG_URL; ?>">よくあるご質問</a>
+                        <a class="p-header__drawer-link" href="<?php echo FAQ_URL; ?>">よくあるご質問</a>
                     </li>
                     <li class="p-header__drawer-item">
-                        <a class="p-header__drawer-link" href="<?php echo WORKS_URL; ?>">お問い合わせ</a>
+                        <a class="p-header__drawer-link" href="https://saporuto.com/contact/" target="_blank" rel="noopener noreferrer">>お問い合わせ</a>
                     </li>
                 </ul>
             </nav>

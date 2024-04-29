@@ -4,7 +4,7 @@
     <div class="p-footer__container">
       <div class="p-footer__btn-labels">
         <div class="p-footer__btn-label">
-          <a class="p-footer__btn-link p-footer__btn-link--order" href="">
+          <a class="p-footer__btn-link p-footer__btn-link--order" href="<?php echo USE_URL; ?>">
             <div class="p-footer__btn-text">
               <span>how to order</span>
               <p>ご注文のしかた</p>
@@ -12,7 +12,7 @@
           </a>
         </div>
         <div class="p-footer__btn-label">
-          <a class="p-footer__btn-link p-footer__btn-link--qa" href="">
+          <a class="p-footer__btn-link p-footer__btn-link--qa" href="<?php echo FAQ_URL; ?>">
             <div class="p-footer__btn-text">
               <span>Question and Answer</span>
               <p>よくあるご質問</p>
@@ -54,30 +54,30 @@
               </a>
             </div>
             <div class="p-footer__page-links">
-              <a href="">運営会社</a>
-              <a href="">プライバシーポリシー</a>
+              <a href="https://saporuto.com" target="_blank" rel="noopener noreferrer">>運営会社</a>
+              <a href="https://saporuto.com/privacy-policy/" target="_blank" rel="noopener noreferrer">>プライバシーポリシー</a>
             </div>
           </div>
         </div>
           <nav class="p-footer__nav">
             <ul class="p-footer__nav-items">
               <li class="p-footer__nav-item">
-                <a href="<?php echo BLOG_URL; ?>">お弁当メニュー</a>
+                <a href="<?php echo MENU_URL; ?>">お弁当メニュー</a>
               </li>
               <li class="p-footer__nav-item">
-                <a href="<?php echo BLOG_URL; ?>">今月の献立</a>
+                <a href="<?php echo MONTHLY_URL; ?>">今月の献立</a>
               </li>
               <li class="p-footer__nav-item">
-                <a href="<?php echo HOME_URL; ?>">ご注文のしかた</a>
+                <a href="<?php echo USE_URL; ?>">ご注文のしかた</a>
               </li>
               <li class="p-footer__nav-item">
-                <a href="<?php echo HOME_URL; ?>">よくあるご質問</a>
+                <a href="<?php echo FAQ_URL; ?>">よくあるご質問</a>
               </li>
               <li class="p-footer__nav-item">
-                <a href="<?php echo WORKS_URL; ?>">高齢者施設向けサービス</a>
+                <a href="<?php echo GROUP_URL; ?>">高齢者施設向けサービス</a>
               </li>
               <li class="p-footer__nav-item">
-                <a href="<?php echo CONTACT_URL; ?>">お問い合わせ</a>
+                <a href="https://saporuto.com/contact/" target="_blank" rel="noopener noreferrer">>お問い合わせ</a>
               </li>
             </ul>
           </nav>
