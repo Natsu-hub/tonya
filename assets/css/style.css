@@ -2399,7 +2399,7 @@ body {
 /* drawer */
 
 .p-header__drawer {
-	background: url("../images/common/mv-img.webp") repeat top center/cover;
+	background: url("../images/common/drawer-img.webp") repeat top center/cover;
 	bottom: 0;
 	color: #333;
 	font-weight: 500;
@@ -3753,6 +3753,11 @@ body {
 	display: block;
 }
 
+.p-to-lineUp {
+	padding-bottom: 3rem;
+	padding-top: 2.5rem;
+}
+
 .p-to-lineUp::before {
 	background: url(../images/common/bg-img-sp.webp) no-repeat center center/cover;
 	height: 100svh;
@@ -3842,8 +3847,8 @@ body {
 }
 
 .p-top-menu__right-head {
-	letter: spacing 0.36px;
 	font-size: 1.125rem;
+	letter-spacing: 0.36px;
 	line-height: 1.7777;
 	margin-top: 1.25rem;
 }
@@ -3881,8 +3886,21 @@ body {
 }
 
 .p-top-mv {
-	height: 88svh;
+	height: 20.6875rem;
 	padding-top: 0;
+}
+
+.p-top-mv__logo {
+	max-width: 12.5rem;
+}
+
+.p-top-mv__deco {
+	bottom: 1.25rem;
+	height: 2.3125rem;
+}
+
+.p-top-mv__deco span {
+	height: 2px;
 }
 
 .p-bottom-service__bg {

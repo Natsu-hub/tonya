@@ -5,6 +5,7 @@ get_header(); ?>
   <!-- p-top-mv -->
     <section class="p-top-mv js-mv">
       <picture class="p-top-mv__img">
+      <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/common/mv-img-sp.webp" type="image/webp" media="(max-width: 768px)">
           <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/common/mv-img.webp" type="image/webp">
           <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/mv-img.png" alt="問屋町食堂の背景画像" width="1440" height="700">
       </picture>

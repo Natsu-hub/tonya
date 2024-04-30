@@ -5,6 +5,11 @@
     position: relative;
     height: inherit;
 
+    @include mq(md) {
+        padding-top: rem(40);
+        padding-bottom: rem(48);
+    }
+
     &::before {
         content: "";
         display: block;

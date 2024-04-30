@@ -128,9 +128,8 @@
     @include mq(md) {
         margin-top: rem(20);
         font-size: rem(18);
-        letter: spacing 0.36px;
+        letter-spacing: .36px;
         line-height: 1.7777;
-        ;
     }
 }
 

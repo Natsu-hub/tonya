@@ -68,7 +68,7 @@
 }
 
 @media (hover: hover) {
-    .p-header__nav-item a:hover{
+    .p-header__nav-item a:hover {
         color: $red;
     }
 }
@@ -156,7 +156,7 @@
     transform: translateX(100%);
     padding-top: rem(70);
     font-weight: 500;
-    background: url("../images/common/mv-img.webp")repeat top center / cover;
+    background: url("../images/common/drawer-img.webp")repeat top center / cover;
 }
 
 .p-header__drawer.is-open {
