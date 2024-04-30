@@ -80,7 +80,7 @@
     gap: rem(31);
     align-items: center;
     justify-content: space-between;
-    transition: border-color, color, .5s ease-out;
+    transition: all .3s ease-out;
     box-shadow: 0px 4px 10px 0px rgba(54, 24, 24, 0.80);
 
     @include mq(md) {
@@ -134,7 +134,7 @@
     justify-content: center;
     width: rem(12);
     height: rem(19);
-    transition: background-color 0.7s ease-out;
+    transition: background-color 0.3s ease-out;
     background: $red;
     mask: url(../images/common/arrow-next.svg) no-repeat center center/cover;
     -webkit-mask: url(../images/common/arrow-next.svg) no-repeat center center/cover;

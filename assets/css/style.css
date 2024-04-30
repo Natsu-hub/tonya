@@ -2272,8 +2272,8 @@ input[type=submit]:hover {
 	        justify-content: space-between;
 	line-height: 1.5;
 	padding: 1.9375rem 3.5rem 2.0625rem 7.375rem;
-	-webkit-transition: border-color, color, 0.5s ease-out;
-	transition: border-color, color, 0.5s ease-out;
+	-webkit-transition: all 0.3s ease-out;
+	transition: all 0.3s ease-out;
 	width: 100%;
 }
 
@@ -2328,8 +2328,8 @@ input[type=submit]:hover {
 	        justify-content: center;
 	-webkit-mask: url(../images/common/arrow-next.svg) no-repeat center center/cover;
 	        mask: url(../images/common/arrow-next.svg) no-repeat center center/cover;
-	-webkit-transition: background-color 0.7s ease-out;
-	transition: background-color 0.7s ease-out;
+	-webkit-transition: background-color 0.3s ease-out;
+	transition: background-color 0.3s ease-out;
 	width: 0.75rem;
 }
 

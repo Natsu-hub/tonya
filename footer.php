@@ -54,8 +54,8 @@
               </a>
             </div>
             <div class="p-footer__page-links">
-              <a href="https://saporuto.com" target="_blank" rel="noopener noreferrer">>運営会社</a>
-              <a href="https://saporuto.com/privacy-policy/" target="_blank" rel="noopener noreferrer">>プライバシーポリシー</a>
+              <a href="https://saporuto.com" target="_blank" rel="noopener noreferrer">運営会社</a>
+              <a href="https://saporuto.com/privacy-policy/" target="_blank" rel="noopener noreferrer">プライバシーポリシー</a>
             </div>
           </div>
         </div>
@@ -77,7 +77,7 @@
                 <a href="<?php echo GROUP_URL; ?>">高齢者施設向けサービス</a>
               </li>
               <li class="p-footer__nav-item">
-                <a href="https://saporuto.com/contact/" target="_blank" rel="noopener noreferrer">>お問い合わせ</a>
+                <a href="https://saporuto.com/contact/" target="_blank" rel="noopener noreferrer">お問い合わせ</a>
               </li>
             </ul>
           </nav>

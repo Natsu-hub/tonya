@@ -36,7 +36,7 @@
                             <a href="<?php echo FAQ_URL; ?>">よくあるご質問</a>
                         </li>
                         <li class="p-header__nav-item">
-                            <a href="https://saporuto.com/contact/" target="_blank" rel="noopener noreferrer">>お問い合わせ</a>
+                            <a href="https://saporuto.com/contact/" target="_blank" rel="noopener noreferrer">お問い合わせ</a>
                         </li>
                     </ul>
                 </nav>
@@ -66,7 +66,7 @@
                         <a class="p-header__drawer-link" href="<?php echo FAQ_URL; ?>">よくあるご質問</a>
                     </li>
                     <li class="p-header__drawer-item">
-                        <a class="p-header__drawer-link" href="https://saporuto.com/contact/" target="_blank" rel="noopener noreferrer">>お問い合わせ</a>
+                        <a class="p-header__drawer-link" href="https://saporuto.com/contact/" target="_blank" rel="noopener noreferrer">お問い合わせ</a>
                     </li>
                 </ul>
             </nav>
