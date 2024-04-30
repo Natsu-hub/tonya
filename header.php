@@ -20,6 +20,23 @@
     <!-- <body> -->
     <header class="p-header l-header js-header">
         <div class="p-header__inner">
+        <?php if ( is_front_page() ) : ?>
+                <h1 class="p-header__logo">
+                <a href="#body">
+                    <picture class="p-header__logo-img">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/header-logo.svg" alt="問屋町食堂" width="160" height="25">
+                     </picture>
+                </a>
+            </h1>
+            <?php else : ?>
+                <div class="p-header__logo">
+                    <a href="<?php echo HOME_URL; ?>">
+                        <picture class="p-header__logo-img">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/header-logo.svg" alt="問屋町食堂" width="160" height="25">
+                        </picture>
+                    </a>
+                </div>
+            <?php endif; ?>
             <div class="p-header__nav-lists">
                 <nav class="p-header__nav">
                     <ul class="p-header__nav-items">
@@ -27,7 +44,7 @@
                             <a href="<?php echo MENU_URL; ?>">お弁当メニュー</a>
                         </li>
                         <li class="p-header__nav-item">
-                            <a href="<?php echo MONTHLY_URL; ?>">今日の献立</a>
+                            <a href="<?php echo MONTHLY_URL; ?>">今月の献立</a>
                         </li>
                         <li class="p-header__nav-item">
                             <a href="<?php echo USE_URL; ?>">ご注文のしかた</a>
@@ -57,7 +74,7 @@
                         <a class="p-header__drawer-link" href="<?php echo MENU_URL; ?>">お弁当メニュー</a>
                     </li>
                     <li class="p-header__drawer-item">
-                        <a class="p-header__drawer-link" href="<?php echo MONTHLY_URL; ?>">今日の献立</a>
+                        <a class="p-header__drawer-link" href="<?php echo MONTHLY_URL; ?>">今月の献立</a>
                     </li>
                     <li class="p-header__drawer-item">
                         <a class="p-header__drawer-link" href="<?php echo USE_URL; ?>">ご注文のしかた</a>

@@ -22,9 +22,40 @@
     height: inherit;
     display: flex;
     justify-content: space-between;
-    justify-content: flex-end;
+    padding-left: rem(40);
+}
 
-    @include mq("md") {}
+.p-header__logo {
+    height: inherit;
+}
+
+.p-header__logo a {
+    height: inherit;
+    display: flex;
+    align-items: center;
+
+    @include mq(md) {
+        align-items: flex-start;
+    }
+}
+
+.p-header__logo-img {
+    width: 100%;
+    max-width: rem(160);
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include mq(md) {
+        display: none;
+    }
+}
+
+.p-header__logo-img img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
 }
 
 .p-header__nav-lists {

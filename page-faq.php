@@ -26,7 +26,7 @@ $page_slug = $post->post_name;
 <!-- p-faq -->
 <section class="p-faq">
   <div class="p-faq__inner l-inner--small">
-    <div class="p-faq__body js-fade-in">
+    <div class="p-faq__body">
       <ul class="p-faq__lists">
         <li class="p-faq__list">
           <div class="p-faq__head">
@@ -36,9 +36,8 @@ $page_slug = $post->post_name;
           <div class="p-faq__answer">
             <div class="p-faq__number">
             <picture class="p-faq__bg-img">
-              <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/below/use_deco-sp.webp" type="image/webp" media="(max-width: 768px)">
-              <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/below/use_deco.webp" type="image/webp">
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/images/below/use_deco.png" alt="" width="133" height="133" loading="lazy">
+              <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/below/faq-deco.webp" type="image/webp">
+              <img src="<?php echo get_template_directory_uri(); ?>/assets/images/below/faq-deco.png" alt="" width="133" height="133" loading="lazy">
             </picture>
             <span class="p-faq__character">A.</span>
             </div>
@@ -53,9 +52,9 @@ $page_slug = $post->post_name;
           <div class="p-faq__answer">
             <div class="p-faq__number">
             <picture class="p-faq__bg-img">
-              <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/below/use_deco-sp.webp" type="image/webp" media="(max-width: 768px)">
-              <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/below/use_deco.webp" type="image/webp">
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/images/below/use_deco.png" alt="" width="133" height="133" loading="lazy">
+              <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/below/faq-deco-sp.webp" type="image/webp" media="(max-width: 768px)">
+              <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/below/faq-deco.webp" type="image/webp">
+              <img src="<?php echo get_template_directory_uri(); ?>/assets/images/below/faq-deco.png" alt="" width="133" height="133" loading="lazy">
             </picture>
             <span class="p-faq__character">A.</span>
             </div>
@@ -70,9 +69,9 @@ $page_slug = $post->post_name;
           <div class="p-faq__answer">
             <div class="p-faq__number">
             <picture class="p-faq__bg-img">
-              <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/below/use_deco-sp.webp" type="image/webp" media="(max-width: 768px)">
-              <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/below/use_deco.webp" type="image/webp">
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/images/below/use_deco.png" alt="" width="133" height="133" loading="lazy">
+              <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/below/faq-deco-sp.webp" type="image/webp" media="(max-width: 768px)">
+              <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/below/faq-deco.webp" type="image/webp">
+              <img src="<?php echo get_template_directory_uri(); ?>/assets/images/below/faq-deco.png" alt="" width="133" height="133" loading="lazy">
             </picture>
             <span class="p-faq__character">A.</span>
             </div>
@@ -87,9 +86,9 @@ $page_slug = $post->post_name;
           <div class="p-faq__answer">
             <div class="p-faq__number">
             <picture class="p-faq__bg-img">
-              <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/below/use_deco-sp.webp" type="image/webp" media="(max-width: 768px)">
-              <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/below/use_deco.webp" type="image/webp">
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/images/below/use_deco.png" alt="" width="133" height="133" loading="lazy">
+              <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/below/faq-deco-sp.webp" type="image/webp" media="(max-width: 768px)">
+              <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/below/faq-deco.webp" type="image/webp">
+              <img src="<?php echo get_template_directory_uri(); ?>/assets/images/below/faq-deco.png" alt="" width="133" height="133" loading="lazy">
             </picture>
             <span class="p-faq__character">A.</span>
             </div>
@@ -105,9 +104,9 @@ $page_slug = $post->post_name;
           <div class="p-faq__answer">
             <div class="p-faq__number">
             <picture class="p-faq__bg-img">
-              <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/below/use_deco-sp.webp" type="image/webp" media="(max-width: 768px)">
-              <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/below/use_deco.webp" type="image/webp">
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/images/below/use_deco.png" alt="" width="133" height="133" loading="lazy">
+              <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/below/faq-deco-sp.webp" type="image/webp" media="(max-width: 768px)">
+              <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/below/faq-deco.webp" type="image/webp">
+              <img src="<?php echo get_template_directory_uri(); ?>/assets/images/below/faq-deco.png" alt="" width="133" height="133" loading="lazy">
             </picture>
             <span class="p-faq__character">A.</span>
             </div>
@@ -122,9 +121,9 @@ $page_slug = $post->post_name;
           <div class="p-faq__answer">
             <div class="p-faq__number">
             <picture class="p-faq__bg-img">
-              <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/below/use_deco-sp.webp" type="image/webp" media="(max-width: 768px)">
-              <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/below/use_deco.webp" type="image/webp">
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/images/below/use_deco.png" alt="" width="133" height="133" loading="lazy">
+              <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/below/faq-deco-sp.webp" type="image/webp" media="(max-width: 768px)">
+              <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/below/faq-deco.webp" type="image/webp">
+              <img src="<?php echo get_template_directory_uri(); ?>/assets/images/below/faq-deco.png" alt="" width="133" height="133" loading="lazy">
             </picture>
             <span class="p-faq__character">A.</span>
             </div>

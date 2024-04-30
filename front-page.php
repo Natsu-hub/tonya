@@ -25,7 +25,7 @@ get_header(); ?>
   <div class="p-to-lineup__inner l-inner">
     <div class="p-to-lineUp__card">
       <h2 class="p-to-lineUp__head">からだに優しく、<br class="u-mobile">美味しいお弁当を<br>ご自宅へお届けします</h2>
-      <div class="p-to-lineUp__text">真心たっぷりなお弁当を１食からお届けいたします。お客様の身体に合った日替わり食や医療対応食のほか、冷凍弁当・パンや飲み物セットも販売しております。また、高齢者施設向けサービスも展開中！お気軽にお問い合わせください。</div>
+      <div class="p-to-lineUp__text">真心たっぷりなお弁当を１食からお届けいたします。お客様の身体に合った日替わり食や医療対応食のほか、冷凍弁当やパンも販売しております。また、高齢者施設向けサービスも展開中！お気軽にお問い合わせください。</div>
       <div class="p-to-lineUp__link">
       <a href="<?php echo MENU_URL; ?>" class="p-to-lineUp__btn">お弁当のラインナップを見る</a>
       </div>

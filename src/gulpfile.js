@@ -59,7 +59,7 @@ const distPath = {
   html: "../",
   css: "../assets/css/",
   js: "../assets/js/",
-  img: "../assets/images/",
+  // img: "../assets/images/",
 };
 
 // ブラウザ対応リスト
