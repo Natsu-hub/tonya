@@ -11,7 +11,7 @@
   gap: rem(38);
   align-items: center;
   justify-content: center;
-  transition: border-color, color, .7s ease-out;
+  transition: border-color, color, .3s ease-out;
 
   @include mq(md) {
     padding: rem(11) rem(39) rem(14) rem(69);
@@ -29,7 +29,7 @@
     justify-content: center;
     width: rem(10);
     height: rem(17);
-    transition: background-color 0.7s ease-out;
+    transition: background-color 0.3s ease-out;
     mask: url(../images/common/arrow-next.svg) no-repeat center center/cover;
     -webkit-mask: url(../images/common/arrow-next.svg) no-repeat center center/cover;
 

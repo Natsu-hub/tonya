@@ -33,15 +33,12 @@
     }
 }
 
-
-
 .p-group-point__sub-title {
     @include mq(md) {
         line-height: 1;
         font-size: rem(14);
     }
 }
-
 
 .p-group-point__strong-title {
     color: $red;

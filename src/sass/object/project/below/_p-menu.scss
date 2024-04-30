@@ -1,13 +1,5 @@
 @use "global" as *;
 
-.p-menu {}
-
-.p-menu__inner {}
-
-.l-inner--small {}
-
-.p-menu__box {}
-
 .p-menu__box:not(:first-of-type) {
     margin-top: rem(120);
 
@@ -19,8 +11,6 @@
 .p-menu__title {
     text-align: center;
 }
-
-.c-common-title {}
 
 .p-menu__items {
     margin-top: rem(72);
@@ -190,12 +180,6 @@
     display: block;
 }
 
-
-
-.p-menu__monthly {}
-
-.p-menu-monthly {}
-
 .p-monthly-menu__items {
     margin-top: rem(72);
     display: grid;
@@ -205,7 +189,6 @@
     @include mq(md) {
         margin-top: rem(35);
         gap: rem(18) 0;
-
     }
 }
 
@@ -227,7 +210,6 @@
     @include mq(md) {
         padding: rem(18) rem(18) rem(13);
     }
-
 }
 
 .p-monthly-menu__item--top a {
@@ -348,11 +330,6 @@
     }
 }
 
-
-.p-menu__title {}
-
-.c-common-title {}
-
 .p-monthly-menu__lists {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -438,7 +415,5 @@
 
     @include mq(md) {
         border: 1px solid $blue;
-
     }
-
 }
