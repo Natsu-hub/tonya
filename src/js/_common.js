@@ -9,39 +9,14 @@ export function common() {
     window.addEventListener('DOMContentLoaded', function () {
         gsap.config({ nullTargetWarn: false })
 
-        // フッター TOPスクロールボタン
-        window.addEventListener("scroll", () => {
-            const scrollTopButton = document.getElementById("js-scrollTop");
-            const isScrollingDown = window.scrollY > 200;
-
-            if ((isScrollingDown && gsap.getProperty(scrollTopButton, "opacity") === 0) ||
-                (!isScrollingDown && gsap.getProperty(scrollTopButton, "opacity") === 1)) {
-                gsap.to(scrollTopButton, {
-                    duration: 1,
-                    autoAlpha: isScrollingDown ? 1 : 0,
-                    ease: isScrollingDown ? "power3.out" : "power3.in",
-                });
+        // change-colorアニメーション
+        window.addEventListener('scroll', function () {
+            if (document.querySelector('.js-mv').offsetHeight < window.scrollY) {
+                document.querySelector('.js-fixed-tel-wrapper').classList.add('is-active');
+            } else {
+                document.querySelector('.js-fixed-tel-wrapper').classList.remove('is-active');
             }
         });
-
-        document.getElementById("js-scrollTop").addEventListener("click", () => {
-            gsap.to(window, {
-                duration: 1,
-                scrollTo: {
-                    y: 0,
-                    autoKill: false,
-                },
-            });
-        });
-
-       // change-colorアニメーション
-       window.addEventListener('scroll', function () {
-        if (document.querySelector('.js-mv').offsetHeight < window.scrollY) {
-            document.querySelector('.js-fixed-tel-wrapper').classList.add('is-active');
-        } else {
-            document.querySelector('.js-fixed-tel-wrapper').classList.remove('is-active');
-        }
-    });
 
         // 電話PC時は無効
         var ua = navigator.userAgent.toLowerCase();

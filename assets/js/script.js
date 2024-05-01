@@ -108,28 +108,6 @@ function common() {
       nullTargetWarn: false
     });
 
-    // フッター TOPスクロールボタン
-    window.addEventListener("scroll", function () {
-      var scrollTopButton = document.getElementById("js-scrollTop");
-      var isScrollingDown = window.scrollY > 200;
-      if (isScrollingDown && gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.getProperty(scrollTopButton, "opacity") === 0 || !isScrollingDown && gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.getProperty(scrollTopButton, "opacity") === 1) {
-        gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.to(scrollTopButton, {
-          duration: 1,
-          autoAlpha: isScrollingDown ? 1 : 0,
-          ease: isScrollingDown ? "power3.out" : "power3.in"
-        });
-      }
-    });
-    document.getElementById("js-scrollTop").addEventListener("click", function () {
-      gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.to(window, {
-        duration: 1,
-        scrollTo: {
-          y: 0,
-          autoKill: false
-        }
-      });
-    });
-
     // change-colorアニメーション
     window.addEventListener('scroll', function () {
       if (document.querySelector('.js-mv').offsetHeight < window.scrollY) {

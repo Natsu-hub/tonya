@@ -104,9 +104,6 @@
          <span class="u-mobile">027-388-0811</span>
         </a>
     </div>
-    <button class="p-fixed-tel__to-top" id="js-scrollTop" title="トップへ戻る">
-      <span class="p-fixed-tel__arrow"></span>
-    </button>
   </div>
   <div class="p-fixed-tel__info u-mobile">対応時間9:00-17:00  ｜  定休日：土日祝日/年末年始   |   当日朝10時まで受付
   </div>
