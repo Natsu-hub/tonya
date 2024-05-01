@@ -74,8 +74,12 @@
 
 .p-top-menu__text {
     margin-top: rem(24);
+    font-size: rem(18);
+    line-height: 2.2222;
 
     @include mq(md) {
+        font-size: rem(15);
+        line-height: 2;
         margin-top: rem(16);
     }
 }

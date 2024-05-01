@@ -47,7 +47,7 @@
           </div>
           <div class="p-footer__links">
             <div class="p-footer__sns">
-              <a href="http://" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.instagram.com/saporuto1101?igsh=Nno1MmI0bHBld252&utm_source=qr" target="_blank" rel="noopener noreferrer">
                 <picture class="p-footer__sns-img">
                   <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/icon_instagram.svg" alt="インスタグラム" width="29" height="29" loading="lazy">
                 </picture>

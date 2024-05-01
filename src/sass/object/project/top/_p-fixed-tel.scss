@@ -48,6 +48,8 @@
 
 .p-fixed-tel__icon {
     max-width: rem(30);
+    max-width: min(calc((30 / 1440) * 100vw), px);
+
     width: 100%;
     height: auto;
     display: block;
@@ -77,6 +79,7 @@
 
 .p-fixed-tel__text-tel p {
     font-size: rem(21);
+    font-size: min(calc((21 / 1440) * 100vw), px);
     font-weight: 700;
     letter-spacing: 1.05px;
     writing-mode: vertical-rl;
@@ -113,6 +116,7 @@
 .p-fixed-tel__text-tel img {
     display: block;
     max-width: rem(48);
+    max-width: min(calc((48 / 1440) * 100vw), px);
     width: 100%;
     height: auto;
     margin-inline: auto;

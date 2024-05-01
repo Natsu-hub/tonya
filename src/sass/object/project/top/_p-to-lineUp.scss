@@ -2,18 +2,26 @@
 
 .p-to-lineUp {
     padding-block: rem(136);
-    position: relative;
-    height: inherit;
+    // color: pink;
 
     @include mq(md) {
         padding-top: rem(40);
         padding-bottom: rem(48);
+        // height: 100svh;
+        // height: 100vh;
+    }
+}
+
+.p-to-lineUp__img {
+    position: relative;
+
+    @include mq(md) {
+        // height: 100svh;
     }
 
     &::before {
         content: "";
         display: block;
-        position: fixed;
         top: 0;
         left: 0;
         z-index: -1;
@@ -23,8 +31,13 @@
         height: 100vh;
 
         @include mq(md) {
-            background: url(../images/common/bg-img-sp.webp) no-repeat center center/cover;
-            height: 100svh;
+            background: url(../images/common/bg-img-sp.webp) no-repeat center bottom/cover;
+            // min-height: 100dvh;
+            // height: 100dvh;画像がズレるのでなし
+            min-height: 100vh;
+            height: 100vh;
+            // min-height: 100lvh;
+            // height: 100lvh;
         }
     }
 }

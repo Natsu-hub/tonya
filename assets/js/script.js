@@ -171,6 +171,15 @@ function header() {
     gsap.config({
       nullTargetWarn: false
     });
+
+    // change-colorアニメーション
+    window.addEventListener('scroll', function () {
+      if (document.querySelector('.js-mv').offsetHeight < window.scrollY) {
+        document.querySelector('.js-header').classList.add('change-color');
+      } else {
+        document.querySelector('.js-header').classList.remove('change-color');
+      }
+    });
     document.querySelectorAll('.js-hamburger').forEach(function (hamburger) {
       hamburger.addEventListener('click', function () {
         this.classList.toggle('is-open');

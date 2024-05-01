@@ -8,8 +8,16 @@
     letter-spacing: 0.32px;
 
     @include mq("md") {
-        height: 27px;
+        height: 50px;
         background-color: transparent;
+    }
+}
+
+/* ヘッダー色変更 */
+.p-header.change-color {
+    @include mq(md) {
+        transition: background-color 0.7s ease 0s;
+        background-color: $white; //スクロールしたあとのヘッダー背景色
     }
 }
 
@@ -23,6 +31,10 @@
     display: flex;
     justify-content: space-between;
     padding-left: rem(40);
+
+    @include mq(md) {
+        padding-left: rem(14);
+    }
 }
 
 .p-header__logo {
@@ -48,7 +60,7 @@
     justify-content: center;
 
     @include mq(md) {
-        display: none;
+        max-width: rem(103);
     }
 }
 
@@ -115,6 +127,7 @@
     z-index: 999;
     width: 35px;
     height: 27px;
+    height: 50px;
     cursor: pointer;
     transition: .3s;
     right: 0;
@@ -138,21 +151,25 @@
 
 .p-header__hamburger span:nth-of-type(1) {
     top: 12px;
+    top: 16px;
     width: 20px;
 }
 
 .p-header__hamburger span:nth-of-type(2) {
     top: 19px;
+    top: 23px;
     width: 15px;
 }
 
 .p-header__hamburger span:nth-of-type(3) {
     top: 26px;
+    top: 30px;
     width: 10px;
 }
 
 .p-header__hamburger.is-open span:nth-of-type(1) {
     top: 20px;
+    top: 24px;
     transform: rotate(45deg);
     width: 21px;
 }
@@ -163,6 +180,7 @@
 
 .p-header__hamburger.is-open span:nth-of-type(3) {
     top: 20px;
+    top: 24px;
     transform: rotate(-45deg);
     width: 21px;
 

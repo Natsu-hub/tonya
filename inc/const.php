@@ -14,10 +14,6 @@ define('TEMPLATE_URI', get_template_directory_uri());
 define('STYLESHEET_URI', get_stylesheet_directory_uri());
 
 
-// define('BLOG_URL', home_url('/blog/'));
-// define('WORKS_URL', home_url('/works/'));
-// define('CONTACT_URL', home_url('/contact/'));
-
 define('MENU_URL', home_url('/menu/'));
 define('MONTHLY_URL', home_url('/monthly-menu/'));
 define('USE_URL', home_url('/use/'));

@@ -64,7 +64,7 @@ $page_slug = $post->post_name;
         <li class="p-faq__list">
           <div class="p-faq__head">
             <div class="p-faq__head-character">Q.</div>
-            <h2 class="p-faq__head-text">定期契約は可能ですか？</h2>
+            <h2 class="p-faq__head-text">定期の申込みは可能ですか？</h2>
           </div>
           <div class="p-faq__answer">
             <div class="p-faq__number">
@@ -75,7 +75,7 @@ $page_slug = $post->post_name;
             </picture>
             <span class="p-faq__character">A.</span>
             </div>
-            <h2 class="p-faq__answer-text">はい。当日分だけのご注文も可能ですが、ほとんどの方は定期的な契約（１か月、３か月、６ヵ月、１年）です。電話番号へおかけいただくか、<a href="https://saporuto.com/contact/" target="_blank" rel="noopener noreferrer">こちらのフォーム</a>へお気軽にご連絡ください。</h2>
+            <h2 class="p-faq__answer-text">はい。当日分だけのご注文も可能ですが、ほとんどの方は定期的な申込み（１か月、３か月、６ヵ月、１年）です。電話番号へおかけいただくか、<a href="https://saporuto.com/contact/" target="_blank" rel="noopener noreferrer">こちらのフォーム</a>へお気軽にご連絡ください。</h2>
           </div>
         </li>
         <li class="p-faq__list">
@@ -99,7 +99,7 @@ $page_slug = $post->post_name;
         <li class="p-faq__list">
           <div class="p-faq__head">
             <div class="p-faq__head-character">Q.</div>
-            <h2 class="p-faq__head-text">製品に対する質問があり、メールを送りたいです</h2>
+            <h2 class="p-faq__head-text">製品に対する質問があり、メールでも申込みはできますか？</h2>
           </div>
           <div class="p-faq__answer">
             <div class="p-faq__number">
@@ -127,7 +127,7 @@ $page_slug = $post->post_name;
             </picture>
             <span class="p-faq__character">A.</span>
             </div>
-            <div class="p-faq__answer-text">月末締めで現金か銀行振り込み、またはキャッシュレス決済（クレジットカード・電子マネー・交通系ICカード・QRコード、アプリ）にも対応しています。</div>
+            <div class="p-faq__answer-text">月末締めで現金か銀行振り込み、口座振替での支払いとなります。</div>
           </div>
         </li>
       </ul>
