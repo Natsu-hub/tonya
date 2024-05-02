@@ -231,7 +231,19 @@
 }
 
 .p-footer__sns {
+    // margin-left: -0.4em;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0 rem(8);
     margin-left: -0.4em;
+    max-width: rem(95);
+    max-width: rem(95);
+    width: 100%;
+
+    @include mq(md) {
+        gap: 0;
+        max-width: rem(80);
+    }
 }
 
 .p-footer__sns a {

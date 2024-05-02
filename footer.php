@@ -52,6 +52,11 @@
                   <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/icon_instagram.svg" alt="インスタグラム" width="29" height="29" loading="lazy">
                 </picture>
               </a>
+              <a href="https://twitter.com/saporuto2023" target="_blank" rel="noopener noreferrer">
+                <picture class="p-footer__sns-img">
+                  <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/icon_x.svg" alt="エックス" width="29" height="29" loading="lazy">
+                </picture>
+              </a>
             </div>
             <div class="p-footer__page-links">
               <a href="https://saporuto.com" target="_blank" rel="noopener noreferrer">運営会社</a>

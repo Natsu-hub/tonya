@@ -2014,7 +2014,16 @@ body {
 }
 
 .p-footer__sns {
+	grid-gap: 0 0.5rem;
+	display: -ms-grid;
+	display: grid;
+	gap: 0 0.5rem;
+	-ms-grid-columns: (1fr)[2];
+	grid-template-columns: repeat(2, 1fr);
 	margin-left: -0.4em;
+	max-width: 5.9375rem;
+	max-width: 5.9375rem;
+	width: 100%;
 }
 
 .p-footer__sns a {
@@ -3626,6 +3635,11 @@ body {
 	margin-top: 1rem;
 	max-width: 20rem;
 	width: 100%;
+}
+
+.p-footer__sns {
+	gap: 0;
+	max-width: 5rem;
 }
 
 .p-footer__sns-img {
