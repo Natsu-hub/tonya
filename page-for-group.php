@@ -61,8 +61,7 @@ $page_slug = $post->post_name;
             <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/below/service_img02.webp" type="image/webp">
             <img src="<?php echo get_template_directory_uri(); ?>/assets/images/below/service_img02.png" alt="タッパーに入れてお届けのイメージ画像" width="334" height="290">
         </picture>
-        <p class="p-group-service__text">調理済み食材を<br>
-調理工場から施設へ直接お届け</p>
+        <p class="p-group-service__text">調理済み食材を<br>タッパーに入れて施設へお届け</p>
         </li>
         <li class="p-group-service__item">
         <picture class="p-group-service__img">
@@ -70,8 +69,7 @@ $page_slug = $post->post_name;
             <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/below/service_img03.webp" type="image/webp">
             <img src="<?php echo get_template_directory_uri(); ?>/assets/images/below/service_img03.png" alt="配食サービスのイメージ画像" width="334" height="290">
         </picture>
-        <p class="p-group-service__text">調理済み食材を<br>
-調理工場から施設へ直接お届け</p>
+        <p class="p-group-service__text">配食サービスを利用して<br>お弁当として施設へお届け</p>
         </li>
       </ul>
       <div class="p-group-service__content">問屋町食堂の高齢者施設向け配食サービスとは、調理済み食材を直接調理工場から施設にお届けするプランと、タッパーに食材を入れて納品するタイプ、お弁当としてお届けするプランがお選びいただけます。
