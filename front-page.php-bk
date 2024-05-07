@@ -1,381 +1,88 @@
 <?php 
-
-$page_slug = $post->post_name;
 get_header(); ?>
-<?php
-$home = esc_url(home_url('/'));
-$info = esc_url(home_url('/info/'));
-$blog = esc_url(home_url('/blog/'));
-?>
-<main class="l-main">
-  <!-- mv -->
-<div class="mv js-fadeIn">
-  <div class="mv__img-sp u-mobile">
-    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/img_mv01-sp.webp" alt="メダカの写真" width="60" height="60" loading="lazy">
-  </div>
-  <div class="mv__box">
-    <div class="mv__content">
-      <h2 class="mv__title">MOARUは
-        <br>あなたの個性が
-        <br class="u-desktop">輝く居場所
+
+<main class="l-main p-main">
+  <!-- p-top-mv -->
+    <section class="p-top-mv js-mv">
+      <picture class="p-top-mv__img">
+      <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/common/mv-img-sp.webp" type="image/webp" media="(max-width: 768px)">
+          <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/common/mv-img.webp" type="image/webp">
+          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/mv-img.png" alt="問屋町食堂の背景画像" width="1440" height="700">
+      </picture>
+      <h2 class="p-top-mv__logo">
+        問屋町食堂
+        <picture>
+            <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/common/logo.webp" type="image/webp">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/logo.png" alt="問屋町食堂" width="320" height="320">
+        </picture>
       </h2>
-      <p class="mv__lead">岐阜市六条大溝で開所した就労継続支援B型事業所です。<br>
-  “ただの作業”としての仕事を超えて、<br>
-  個々の強みを引き出し、新たな可能性を切り拓きます。
-      </p>
-      <div class="mv__btn">
-        <a class="btn--arrow btn--main-color btn--mv" href="<?php echo $home; ?>#contact">見学・体験に申し込む</a>
-      </div>
-    </div>
-  </div>
-  <div class="mv__img-pc u-desktop">
-    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/img_mv01.webp" alt="メダカの写真" width="1420" height="624" loading="lazy">
-    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/img_mv02.webp" alt="多肉植物の写真" width="1420" height="624" loading="lazy">
-  </div>
-  <div class="mv__img-sp u-mobile">
-    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/img_mv02-sp.webp" alt="多肉植物の写真" width="1668" height="540" loading="lazy">
-  </div>
-</div>
-
-<!-- info -->
-<div class="info js-fade-in">
-  <div class="info__inner inner">
-    <div class="info__left">
-      <h2 class="info__head common-title">お知らせ</h2>
-      <div class="info__btn"><a class="btn-info" href="<?php echo $info; ?>">一覧を見る</a></div>
-    </div>
-    <div class="info__right">
-    <?php
-      if (wp_is_mobile()) {
-        $num = 2; // スマホの表示数(全件は-1)
-      } else {
-        $num = 3; // PCの表示数(全件は-1)
-      }
-      $args = [
-        'post_type' => 'post',
-        // 投稿タイプのスラッグ(通常投稿は'post')
-        'posts_per_page' => $num, // 表示件数
-      ];
-      $the_query = new WP_Query($args);
-      if ($the_query->have_posts()):
-        while ($the_query->have_posts()):
-          $the_query->the_post();
-          ?>
-          <a class="info__content list" href="<?php the_permalink(); ?>">
-            <time datetime="<?php the_time('c'); ?>"><?php the_time('Y年m月d日'); ?></time>
-            <p>
-              <?php the_title(); ?>
-            </p>
-          </a>
-        <?php endwhile; else: ?>
-        <p>まだ記事がありません</p>
-      <?php endif; ?>
-      <?php wp_reset_postdata(); ?>
-      <!-- 記事のループ処理終了 -->
-    </div>
-  </div>
-</div>
-
-  <!-- about -->
-  <section class="about js-fade-in">
-    <div class="about__inner inner">
-      <div class="js-fade-in">
-        <div class="about__title">
-          <p>就労継続支援B型事業所</p>
-          <h2 class="util-title">MOARU六条大溝とは</h2>
-        </div>
-        <div class="about__message">
-          <p>MOARU六条大溝は、障害者総合支援法に基づいた「就労継続支援B型」を行なっている事業所です。身体障がい・知的障がい・精神障がい・発達障がいがあり、一般的な就職が難しい方の「自分らしい働き方」を実現します。</p>
-          <p>障がいのある方の多くが無料でご利用いただくことができます。</p>
-        </div>
-      </div>
-    </div>
-      <ul class="about__items js-fade-in">
-        <li class="about__item">
-          <div class="about__img">
-          <picture>
-              <source type="image/webp" srcset="<?php echo get_template_directory_uri(); ?>/assets/images/common/img_about03-sp.webp" media="(max-width: 768px)">
-              <source type="image/webp" srcset="<?php echo get_template_directory_uri(); ?>/assets/images/common/img_about03.webp">
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/img_about03.webp" alt="室内の写真" width="1440" height="960" loading="lazy">
-            </picture>
-          </div>
-          <div class="about__box">
-            <div class="about__content">
-              <h3 class="about__common-title common-title">“安心できる居場所”を<br>実現するサポート体制</h3>
-              <p class="about__text">MOARUを「安心できる居場所」と思ってもらえるように、スタッフは笑顔や楽しさを大切に、利用者さんをあたたかくお迎えしています。</p>
-            </div>
-          </div>
-        </li>
-        <li class="about__item about__item-reverse">
-          <div class="about__img">
-          <picture>
-              <source type="image/webp" srcset="<?php echo get_template_directory_uri(); ?>/assets/images/common/img_about04-sp.webp" media="(max-width: 768px)">
-              <source type="image/webp" srcset="<?php echo get_template_directory_uri(); ?>/assets/images/common/img_about04.webp">
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/img_about04.webp" alt="通勤中のイメージ写真" width="1440" height="960" loading="lazy">
-            </picture>
-          </div>
-          <div class="about__box">
-            <div class="about__content">
-              <h3 class="about__common-title common-title">体調や希望に合わせて<br>自分のペースで通える</h3>
-              <p class="about__text">MOARUは毎日通わなくて大丈夫。１日何時間働くかも自分で決めることができます。スタッフのサポートのもと、障がいや体調に合わせてご利用いただけます。</p>
-            </div>
-          </div>
-        </li>
-        <li class="about__item">
-          <div class="about__img">
-          <picture>
-              <source type="image/webp" srcset="<?php echo get_template_directory_uri(); ?>/assets/images/common/img_about05-sp.webp" media="(max-width: 768px)">
-              <source type="image/webp" srcset="<?php echo get_template_directory_uri(); ?>/assets/images/common/img_about05.webp">
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/img_about05.webp" alt="車や食事のイメージ写真" width="1440" height="960" loading="lazy">
-            </picture>
-          </div>
-          <div class="about__box">
-            <div class="about__content">
-              <h3 class="about__common-title common-title">“通いやすさ”のための<br>お手伝い </h3>
-              <p class="about__text">少しでも通いやすい環境を作るために、MOARUでは近隣までの送迎や、希望者への食事提供を行なっています。</p>
-            </div>
-          </div>
-        </li>
-      </ul>
-  </section>
-
-  <!-- program -->
-  <section class="program section" id="program">
-    <div class="program__title js-fade-in">
-        <h2 class="util-title">作業プログラム</h2>
-    </div>
-    <ul class="program__items js-fade-in">
-        <li class="program__item">
-          <div class="program__img">
-            <picture>
-              <source type="image/webp" srcset="<?php echo get_template_directory_uri(); ?>/assets/images/common/img_program01-sp.webp" media="(max-width: 768px)">
-              <source type="image/webp" srcset="<?php echo get_template_directory_uri(); ?>/assets/images/common/img_program01.webp">
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/img_program01.webp" alt="メダカの写真" width="1054" height="624" loading="lazy">
-            </picture>
-          </div>
-          <div class="program__box">
-            <div class="program__content">
-              <h3 class="program__common-title common-title common-title--small">めだかの育成・関連商品の販売</h3>
-              <ul class="program__lists">
-                <li class="program__list list">餌やり、水替え、採卵、育成、担当水槽管理</li>
-                <li class="program__list list">水草制作、パック詰め、販売</li>
-              </ul>
-            </div>
-          </div>
-        </li>
-        <li class="program__item">
-          <div class="program__img">
-          <picture>
-              <source type="image/webp" srcset="<?php echo get_template_directory_uri(); ?>/assets/images/common/img_program02-sp.webp" media="(max-width: 768px)">
-              <source type="image/webp" srcset="<?php echo get_template_directory_uri(); ?>/assets/images/common/img_program02.webp">
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/img_program02.webp" alt="多肉植物の写真" width="1054" height="624" loading="lazy">
-            </picture>
-          </div>
-          <div class="program__box">
-            <div class="program__content">
-              <h3 class="program__common-title common-title common-title--small">多肉植物の育成・関連商品の販売</h3>
-              <ul class="program__lists">
-                <li class="program__list list">水やり、草引き、観察、植え替え、販売 </li>
-                <li class="program__list list">軽リメイク鉢の製作、寄せ植え、販売</li>
-              </ul>
-            </div>
-          </div>
-        </li>
-        <li class="program__item">
-          <div class="program__img">
-          <picture>
-              <source type="image/webp" srcset="<?php echo get_template_directory_uri(); ?>/assets/images/common/img_program03-sp.webp" media="(max-width: 768px)">
-              <source type="image/webp" srcset="<?php echo get_template_directory_uri(); ?>/assets/images/common/img_program03.webp">
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/img_program03.webp" alt="清掃のイメージ写真" width="1054" height="624" loading="lazy">
-            </picture>
-          </div>
-          <div class="program__box">
-            <div class="program__content">
-              <h3 class="program__common-title common-title common-title--small">有料老人ホームにおける軽作業</h3>
-              <ul class="program__lists">
-                <li class="program__list list">自法人内施設の清掃、草引き </li>
-                <li class="program__list list">施設外就労、軽作業</li>
-              </ul>
-            </div>
-          </div>
-        </li>
-      </ul>
-  </section>
-
-      <!-- top-blog -->
-      <section class="top-blog section" id="top-blog">
-    <div class="top-blog__inner inner">
-    <div class="program__title js-fade-in">
-        <h2 class="util-title">活動のようす</h2>
-    </div>
-    <div class="js-fade-in">
-      <div class="top-blog__cards cards">
-      <?php
-      if (wp_is_mobile()) {
-        $num = 3; // スマホの表示数(全件は-1)
-      } else {
-        $num = 3; // PCの表示数(全件は-1)
-      }
-      $args = [
-        'post_type' => 'blog',
-        // 投稿タイプのスラッグ(通常投稿は'post')
-        'posts_per_page' => $num, // 表示件数
-      ];
-      $the_query = new WP_Query($args);
-      if ($the_query->have_posts()):
-        while ($the_query->have_posts()):
-          $the_query->the_post();
-          ?>
-          <a href="<?php the_permalink(); ?>" class="card js-fade-in">
-              <figure class="card__img-wrapper">
-              <?php if (has_post_thumbnail()) {
-                  the_post_thumbnail();
-                } else { ?>
-                  <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/no-img.webp" alt="blog1">
-                <?php } ?>
-              </figure>
-              <div class="card__body">
-                <p class="card__text">
-                  <?php the_title(); ?>
-                </p>
-                <time class="card__time" datetime="<?php the_time('c'); ?>"><?php the_time('Y年m月d日'); ?></time>
-              </div>
-          </a>
-          <?php endwhile; ?>
-      <?php endif; ?>
-      <?php wp_reset_postdata(); ?>
-      </div>
-      <div class="top-blog__btns js-fade-in">
-        <div class="top-blog__btn"><a class="btn--arrow btn--blog btn--main-color" href="<?php echo $blog; ?>">ブログ・コラムを見る</a></div>
-        <div class="top-blog__btn"><a class="btn--arrow btn--blog btn--instagram" href="https://www.instagram.com/moarurokujouoomizo/" target="_blank" rel="noopener noreferrer">Instagramを見る</a></div>
-      </div>
-    </div>
-    </div>
-  </section>
-
-    <!-- greeting -->
-    <section class="greeting section">
-      <div class="greeting__inner inner">
-        <div class="greeting__title js-fade-in">
-          <h2 class="util-title">サービス管理者あいさつ</h2>
-        </div>
-        <ul class="greeting__items js-fade-in">
-          <li class="greeting__item">
-            <div class="greeting__box">
-              <h3 class="greeting__lead">みなさんの居場所の一つとなれますように</h3>
-                <dl class="greeting__name">
-                  <dt>株式会社MOARU 代表</dt>
-                  <dd>奧村 貴子</dd>
-                </dl>
-                <div class="greeting__message">わたしたちは利用者一人ひとりの個性を尊重し、利用者のみなさまの持っている力を最大限に引き出せるようお手伝いいたします。何より、あなたの大切な居場所となるように、スタッフと共にコミュニケーションを大切にしています。何かお困りごとや叶えたい目標がある場合も、いつでも気軽にお声かけください。共により良い未来を築いていけることを楽しみにしています！</div>
-            </div>
-            <div class="greeting__img">
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/img_greeting01.webp" alt="奧村 貴子氏のイラスト" width="524" height="526" loading="lazy">
-            </div>
-          </li>
-          <li class="greeting__item">
-            <div class="greeting__box">
-              <h3 class="greeting__lead">一人一人に合わせてサポートいたします！</h3>
-                <dl class="greeting__name">
-                  <dt>株式会社MOARU 指導員</dt>
-                  <dd>奥村 優李</dd>
-                </dl>
-                <div class="greeting__message">支援員としてみなさまのサポートができることをとてもうれしく思っています。お仕事を通じて一緒に成長し、新たなステップを踏み出しましょう。<br>
-何かお手伝いが必要な時は遠慮なくお声をかけてださい。<br>
-あなたの個性や夢を大切にし、共に素敵な未来を創り上げていけることを楽しみにしています！</div>
-            </div>
-            <div class="greeting__img">
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/img_greeting02.webp" alt="奧村 貴子氏のイラスト" width="524" height="526" loading="lazy">
-            </div>
-          </li>
-        </ul>
+      <div class="p-top-mv__deco"><span></span>
       </div>
     </section>
 
-  <!-- flow -->
-    <section class="flow section" id="flow">
-      <div class="flow__inner inner">
-        <div class="flow__title js-fade-in">
-          <h2 class="util-title">ご利用までの流れ</h2>
-        </div>
-        <ul class="flow__lists js-fade-in">
-          <li class="flow__list">
-            <div class="flow__circle">
-              <span>STEP</span>
-              <p class="flow__number">1</p>
-            </div>
-            <div class="flow__box">
-              <div class="flow__img flow__img--mail">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/icon_flow01.webp" alt="メールのアイコン" width="236" height="190" loading="lazy">
-              </div>
-              <h3 class="flow__head">ご相談・見学予約</h3>
-            </div>
-            <p class="flow__text">まずはお気軽にお問合せください。</p>
-          </li>
-          <li class="flow__list">
-            <div class="flow__circle">
-              <span>STEP</span>
-              <p class="flow__number">2</p>
-            </div>
-            <div class="flow__box">
-              <div class="flow__img">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/icon_flow02.webp" alt="カレンダーのアイコン" width="236" height="190" loading="lazy">
-              </div>
-              <h3 class="flow__head">無料見学・体験</h3>
-            </div>
-            <p class="flow__text">MOARUを直接見て、体験してみてください。複数回の体験も可能。</p>
-          </li>
-          <li class="flow__list">
-            <div class="flow__circle">
-              <span>STEP</span>
-              <p class="flow__number">3</p>
-            </div>
-            <div class="flow__box">
-              <div class="flow__img">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/icon_flow03.webp" alt="手続きフォームのアイコン" width="236" height="190" loading="lazy">
-              </div>
-              <h3 class="flow__head">申請手続き・ご契約</h3>
-            </div>
-            <p class="flow__text">ご利用に必要な書類等をいただき、ご契約完了です。</p>
-            <div class="flow__deco">
-            </div>
-          </li>
-        </ul>
+<!-- p-to-lineUp -->
+<section class="p-to-lineUp">
+<div class="p-to-lineUp__img">
+  <div class="p-to-lineup__inner l-inner">
+    <div class="p-to-lineUp__card">
+      <h3 class="p-to-lineUp__head">からだに優しく、<br class="u-mobile">美味しいお弁当を<br>ご自宅へお届けします</h3>
+      <div class="p-to-lineUp__text">真心たっぷりなお弁当を１食からお届けいたします。お客様の身体に合った日替わり食や医療対応食のほか、冷凍弁当やパンも販売しております。また、高齢者施設向けサービスも展開中！お気軽にお問い合わせください。</div>
+      <div class="p-to-lineUp__link">
+      <a href="<?php echo MENU_URL; ?>" class="p-to-lineUp__btn">お弁当のラインナップを見る</a>
       </div>
-    </section>
+      <div class="p-to-lineUp__preload">
+      </div>
+    </div>
+  </div>
+  </div>
+</section>
 
- <!-- contact -->
- <section class="contact section" id="contact">
-      <div class="contact__inner inner">
-        <div class="contact__title js-fade-in">
-          <h2 class="util-title">ご相談・お問い合わせ</h2>
-        </div>
-        <div class="contact__items">
-          <div class="contact__tel js-fade-in">
-            <h3 class="contact__head">電話でご相談したい方</h3>
-            <p class="contact__text">お電話でのご相談・見学予約を承ります。<br>
-  以下の電話番号へおかけください。</p>
-            <a class="contact__box tel" href="tel:+81582010522">
-              <div class="tel__icon">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/icon_tel.webp" alt="電話のアイコン" width="102" height="108" loading="lazy">
-              </div>
-              <div class="tel__details">
-                <p class="tel__numbers">058-201-0522</p>
-                <p class="tel__info">受付時間：8:00-17:00(土日祝除く)</p>
-              </div>
-            </a>
-          </div>
-          <div class="contact__apply-form js-fade-in">
-            <h3 class="contact__head">申込フォームから相談したい方</h3>
-            <p class="contact__text">以下のフォームへ必要事項をご入力ください。<br>
-３営業日以内に担当よりご連絡いたします。</p>
-  <?php echo do_shortcode('[contact-form-7 id="281" title="お問い合わせ"]'); ?>
-            <div class="contact__grecaptcha">
-              このサイトはreCAPTCHAによって保護されており、Googleの<a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">プライバシーポリシー</a>と<a href="https://policies.google.com/terms" target="_blank" rel="noopener noreferrer">利用規約</a>が適用されます。
-            </div>
-          </div>
+<!-- p-top-menu -->
+<section class="p-top-menu">
+  <div class="p-top-menu__inner l-inner">
+    <div class="p-top-menu__body">
+      <div class="p-top-menu__left">
+        <picture class="p-top-menu__img">
+          <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/common/top-menu_img01.webp" type="image/webp">
+          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/top-menu_img01.jpg" alt="栄養バランスや旬を考えた
+毎月の献立" width="482" height="318" loading="lazy">
+        </picture>
+        <h3 class="p-top-menu__head">栄養バランスや旬を考えた<br>毎月の献立</h3>
+        <div class="p-top-menu__text">皆様に飽きがこないよう、おかずの種類を数百種以上取りそろえています。その時期に食べるのが一番美味しい旬のものを取り入れ、季節に合わせて彩り豊かなメニューを用意しております。</div>
+        <div class="p-top-menu__link">
+          <a href="<?php echo MONTHLY_URL; ?>" class="c-btn c-btn--red">献立表はこちら</a>
         </div>
       </div>
-    </section>
+      <div class="p-top-menu__right">
+        <div class="p-top-menu__right-box">
+          <div class="p-top-menu__right-content">
+            <h4 class="p-top-menu__right-head">毎日手作業でダシをとり<br>あたたかな手作りの味</h4>
+            <div class="p-top-menu__right-text">和食中心の献立で、国産のカツオと昆布で毎日ダシをとってお作りしています。<br>手作りを基本とした家庭的な味をお届けしています。</div>
+          </div>
+          <picture class="p-top-menu__right-img">
+              <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/common/top-menu_img02-sp.webp" type="image/webp" media="(max-width: 768px)">
+              <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/common/top-menu_img02.webp" type="image/webp">
+              <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/top-menu_img02.jpg" alt="毎日手作業でダシをとりあたたかな手作りの味" width="203" height="320" loading="lazy">
+          </picture>
+        </div>
+        <div class="p-top-menu__right-box p-top-menu__right-box--reverse">
+          <div class="p-top-menu__right-content">
+            <h4 class="p-top-menu__right-head">農家も喜ぶ全量買取<br>契約栽培</h4>
+            <div class="p-top-menu__right-text">生鮮野菜は国産野菜を指定し納入。また、農家さんと直接契約・全量買取することでコストダウンが可能。生産者がわかるので安心してお食事いただけます。</div>
+          </div>
+          <picture class="p-top-menu__right-img">
+              <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/common/top-menu_img03-sp.webp" type="image/webp" media="(max-width: 768px)">
+              <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/common/top-menu_img03.webp" type="image/webp">
+              <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/top-menu_img03.jpg" alt="農家も喜ぶ全量買取契約栽培" width="203" height="320" loading="lazy">
+          </picture>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- p-bottom-service -->
+  <?php get_template_part('template/bottom-service'); ?>
+
 </main>
 <?php get_footer(); ?>
