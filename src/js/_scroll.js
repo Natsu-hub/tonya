@@ -1,3 +1,9 @@
+import { gsap } from "gsap";
+import { ScrollToPlugin } from "gsap/ScrollToPlugin";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollToPlugin);
+gsap.registerPlugin(ScrollTrigger);
 export function scroll() {
     const headerHeight = document.querySelector('header').offsetHeight + 20;  // 固定ヘッダーの高さ（＋余白の追加）
 
