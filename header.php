@@ -99,7 +99,7 @@
       </picture>
       <div class="p-fixed-tel__text-tel">
         <p>ご注文<br class="u-mobile">ダイヤル</p>
-        <a href="tel:+027-388-0811">
+        <a href="tel:027-388-0811">
          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/fixed-tel-img.svg" alt="電話をかける" width="48" height="645">
          <span class="u-mobile">027-388-0811</span>
         </a>

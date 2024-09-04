@@ -15,10 +15,8 @@ $page_slug = $post->post_name;
                 <span class="c-below-mv__main-title">よくあるご質問</span>
             </h1>
             <picture class="c-below-mv__img">
-                <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/below/below-mv.webp"
-                    type="image/webp">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/below/below-mv.png" alt="よくあるご質問"
-                    width="1440" height="400">
+                <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/below/below-mv.webp" type="image/webp">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/below/below-mv.png" alt="よくあるご質問" width="1440" height="400">
             </picture>
             <div class="c-below-mv__deco"><span></span>
             </div>
@@ -38,11 +36,8 @@ $page_slug = $post->post_name;
                         <div class="p-faq__answer">
                             <div class="p-faq__number">
                                 <picture class="p-faq__bg-img">
-                                    <source
-                                        srcset="<?php echo get_template_directory_uri(); ?>/assets/images/below/faq-deco.webp"
-                                        type="image/webp">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/below/faq-deco.png"
-                                        alt="" width="133" height="133" loading="lazy">
+                                    <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/below/faq-deco.webp" type="image/webp">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/below/faq-deco.png" alt="" width="133" height="133" loading="lazy">
                                 </picture>
                                 <span class="p-faq__character">A.</span>
                             </div>
@@ -59,14 +54,9 @@ $page_slug = $post->post_name;
                         <div class="p-faq__answer">
                             <div class="p-faq__number">
                                 <picture class="p-faq__bg-img">
-                                    <source
-                                        srcset="<?php echo get_template_directory_uri(); ?>/assets/images/below/faq-deco-sp.webp"
-                                        type="image/webp" media="(max-width: 768px)">
-                                    <source
-                                        srcset="<?php echo get_template_directory_uri(); ?>/assets/images/below/faq-deco.webp"
-                                        type="image/webp">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/below/faq-deco.png"
-                                        alt="" width="133" height="133" loading="lazy">
+                                    <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/below/faq-deco-sp.webp" type="image/webp" media="(max-width: 768px)">
+                                    <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/below/faq-deco.webp" type="image/webp">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/below/faq-deco.png" alt="" width="133" height="133" loading="lazy">
                                 </picture>
                                 <span class="p-faq__character">A.</span>
                             </div>
@@ -83,21 +73,15 @@ $page_slug = $post->post_name;
                         <div class="p-faq__answer">
                             <div class="p-faq__number">
                                 <picture class="p-faq__bg-img">
-                                    <source
-                                        srcset="<?php echo get_template_directory_uri(); ?>/assets/images/below/faq-deco-sp.webp"
-                                        type="image/webp" media="(max-width: 768px)">
-                                    <source
-                                        srcset="<?php echo get_template_directory_uri(); ?>/assets/images/below/faq-deco.webp"
-                                        type="image/webp">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/below/faq-deco.png"
-                                        alt="" width="133" height="133" loading="lazy">
+                                    <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/below/faq-deco-sp.webp" type="image/webp" media="(max-width: 768px)">
+                                    <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/below/faq-deco.webp" type="image/webp">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/below/faq-deco.png" alt="" width="133" height="133" loading="lazy">
                                 </picture>
                                 <span class="p-faq__character">A.</span>
                             </div>
                             <h2 class="p-faq__answer-text">
-                                はい。１日分だけのご注文も可能ですが、ほとんどの方は定期的な申込み（１か月、３か月、６ヵ月、１年）です。電話番号へおかけいただくか、<a
-                                    href="https://saporuto.com/contact/" target="_blank"
-                                    rel="noopener noreferrer">こちらのフォーム</a>へお気軽にご連絡ください。</h2>
+                                はい。１日分だけのご注文も可能ですが、ほとんどの方は定期的な申込み（１か月、３か月、６ヵ月、１年）です。電話番号へおかけいただくか、<a href="https://saporuto.com/contact/" target="_blank" rel="noopener noreferrer">こちらのフォーム</a>へお気軽にご連絡ください。また、ご注文をご希望の場合は注文希望日2週間前の火曜日までにご連絡ください。なお、キャンセルは前日の17時までにご連絡いただき、当日キャンセルの場合はキャンセル料が発生します。（ご注文いただいた金額分）
+                            </h2>
                         </div>
                     </li>
                     <li class="p-faq__list">
@@ -108,14 +92,9 @@ $page_slug = $post->post_name;
                         <div class="p-faq__answer">
                             <div class="p-faq__number">
                                 <picture class="p-faq__bg-img">
-                                    <source
-                                        srcset="<?php echo get_template_directory_uri(); ?>/assets/images/below/faq-deco-sp.webp"
-                                        type="image/webp" media="(max-width: 768px)">
-                                    <source
-                                        srcset="<?php echo get_template_directory_uri(); ?>/assets/images/below/faq-deco.webp"
-                                        type="image/webp">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/below/faq-deco.png"
-                                        alt="" width="133" height="133" loading="lazy">
+                                    <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/below/faq-deco-sp.webp" type="image/webp" media="(max-width: 768px)">
+                                    <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/below/faq-deco.webp" type="image/webp">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/below/faq-deco.png" alt="" width="133" height="133" loading="lazy">
                                 </picture>
                                 <span class="p-faq__character">A.</span>
                             </div>
@@ -131,21 +110,14 @@ $page_slug = $post->post_name;
                         <div class="p-faq__answer">
                             <div class="p-faq__number">
                                 <picture class="p-faq__bg-img">
-                                    <source
-                                        srcset="<?php echo get_template_directory_uri(); ?>/assets/images/below/faq-deco-sp.webp"
-                                        type="image/webp" media="(max-width: 768px)">
-                                    <source
-                                        srcset="<?php echo get_template_directory_uri(); ?>/assets/images/below/faq-deco.webp"
-                                        type="image/webp">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/below/faq-deco.png"
-                                        alt="" width="133" height="133" loading="lazy">
+                                    <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/below/faq-deco-sp.webp" type="image/webp" media="(max-width: 768px)">
+                                    <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/below/faq-deco.webp" type="image/webp">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/below/faq-deco.png" alt="" width="133" height="133" loading="lazy">
                                 </picture>
                                 <span class="p-faq__character">A.</span>
                             </div>
                             <div class="p-faq__answer-text">
-                                誠に申し訳ございませんが、お弁当のご注文は電話でのみ承っております。ご注文はメールで受け付けておりませんが、ご意見・ご要望やお問合せは<a
-                                    href="https://saporuto.com/contact/" target="_blank"
-                                    rel="noopener noreferrer">こちらのフォーム</a>へお願いいたします。</div>
+                                誠に申し訳ございませんが、お弁当のご注文は電話でのみ承っております。ご注文はメールで受け付けておりませんが、ご意見・ご要望やお問合せは<a href="https://saporuto.com/contact/" target="_blank" rel="noopener noreferrer">こちらのフォーム</a>へお願いいたします。</div>
                         </div>
                     </li>
                     <li class="p-faq__list">
@@ -156,14 +128,9 @@ $page_slug = $post->post_name;
                         <div class="p-faq__answer">
                             <div class="p-faq__number">
                                 <picture class="p-faq__bg-img">
-                                    <source
-                                        srcset="<?php echo get_template_directory_uri(); ?>/assets/images/below/faq-deco-sp.webp"
-                                        type="image/webp" media="(max-width: 768px)">
-                                    <source
-                                        srcset="<?php echo get_template_directory_uri(); ?>/assets/images/below/faq-deco.webp"
-                                        type="image/webp">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/below/faq-deco.png"
-                                        alt="" width="133" height="133" loading="lazy">
+                                    <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/below/faq-deco-sp.webp" type="image/webp" media="(max-width: 768px)">
+                                    <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/below/faq-deco.webp" type="image/webp">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/below/faq-deco.png" alt="" width="133" height="133" loading="lazy">
                                 </picture>
                                 <span class="p-faq__character">A.</span>
                             </div>
