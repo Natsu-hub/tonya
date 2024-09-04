@@ -20,22 +20,22 @@
     <!-- <body> -->
     <header class="p-header l-header js-header">
         <div class="p-header__inner">
-        <?php if ( is_front_page() ) : ?>
-                <h1 class="p-header__logo">
+            <?php if ( is_front_page() ) : ?>
+            <h1 class="p-header__logo">
                 <a href="#body">
                     <picture class="p-header__logo-img">
                         <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/header-logo.svg" alt="問屋町食堂" width="160" height="25">
-                     </picture>
+                    </picture>
                 </a>
             </h1>
             <?php else : ?>
-                <div class="p-header__logo">
-                    <a href="<?php echo HOME_URL; ?>">
-                        <picture class="p-header__logo-img">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/header-logo.svg" alt="問屋町食堂" width="160" height="25">
-                        </picture>
-                    </a>
-                </div>
+            <div class="p-header__logo">
+                <a href="<?php echo HOME_URL; ?>">
+                    <picture class="p-header__logo-img">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/header-logo.svg" alt="問屋町食堂" width="160" height="25">
+                    </picture>
+                </a>
+            </div>
             <?php endif; ?>
             <div class="p-header__nav-lists">
                 <nav class="p-header__nav">
@@ -91,20 +91,20 @@
     </header>
 
     <!-- p-fixed-tel -->
-<div class="p-fixed-tel-wrapper js-fixed-tel-wrapper">
-  <div class="p-fixed-tel">
-    <picture class="p-fixed-tel__icon">
-        <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/common/icon-tel.webp" type="image/webp">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/icon-tel.png" alt="電話のアイコン" width="30" height="30">
-      </picture>
-      <div class="p-fixed-tel__text-tel">
-        <p>ご注文<br class="u-mobile">ダイヤル</p>
-        <a href="tel:027-388-0811">
-         <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/fixed-tel-img.svg" alt="電話をかける" width="48" height="645">
-         <span class="u-mobile">027-388-0811</span>
-        </a>
+    <div class="p-fixed-tel-wrapper js-fixed-tel-wrapper">
+        <div class="p-fixed-tel">
+            <picture class="p-fixed-tel__icon">
+                <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/common/icon-tel.webp" type="image/webp">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/icon-tel.png" alt="電話のアイコン" width="30" height="30">
+            </picture>
+            <div class="p-fixed-tel__text-tel">
+                <p>ご注文<br class="u-mobile">ダイヤル</p>
+                <a href="tel:027-388-0811">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/fixed-tel-img.svg" alt="電話をかける" width="48" height="645">
+                    <span class="u-mobile">027-388-0811</span>
+                </a>
+            </div>
+        </div>
+        <div class="p-fixed-tel__info u-mobile">対応時間9:00-17:00 ｜ 定休日：土日祝日/年末年始
+        </div>
     </div>
-  </div>
-  <div class="p-fixed-tel__info u-mobile">対応時間9:00-17:00  ｜  定休日：土日祝日/年末年始   |   当日朝10時まで受付
-  </div>
-</div>
